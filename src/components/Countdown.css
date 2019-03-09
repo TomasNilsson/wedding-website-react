@@ -1,0 +1,13 @@
+.countdown-col {
+  display: inline-block;
+}
+
+.countdown-col-element {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.countdown-col-element-number {
+  font-size: 50px;
+}

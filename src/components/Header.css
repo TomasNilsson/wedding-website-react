@@ -40,7 +40,7 @@
 .slider-content .title {
 	font-family: 'Playball', cursive;
 	font-weight: normal;
-	font-size: 75px;
+	font-size: 85px;
 	margin: 15px 0;
 }
 
@@ -51,9 +51,14 @@
 }
 
 .slider-content .date {
-	font-size: 20px;
+	font-size: 25px;
+	margin: 15px 0;
 }
 
 .custom-color {
 	color: #e45f74;
+}
+
+.count-down {
+	margin-top: 35px;
 }
