@@ -1,0 +1,59 @@
+.main-slider {
+	height: 100vh;
+	position: relative;
+	z-index: 1;
+	background-image: url(../images/header.jpg);
+	background-size: cover;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-slider:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	background: rgba(0, 0, 0, 0.45);
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjIwcHgiIGhlaWdodD0iMjBweCIgdmlld0JveD0iMCAwIDIwIDIwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyMCAyMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdHRlcm4gIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIGlkPSJOZXdfUGF0dGVybl80IiB2aWV3Qm94PSIwIC0yIDIgMiIgc3R5bGU9Im92ZXJmbG93OnZpc2libGU7Ij4NCgk8Zz4NCgkJPHBvbHlnb24gc3R5bGU9ImZpbGw6bm9uZTsiIHBvaW50cz0iMCwtMiAyLC0yIDIsMCAwLDAgCQkiLz4NCgkJDQoJCQk8bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzFfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAuNSIgeTE9Ii0xNjM2MSIgeDI9IjEuNSIgeTI9Ii0xNjM2MSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIC0xNjM2MikiPg0KCQkJPHN0b3AgIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMCIvPg0KCQkJPHN0b3AgIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDtzdG9wLW9wYWNpdHk6MCIvPg0KCQk8L2xpbmVhckdyYWRpZW50Pg0KCQk8cG9seWdvbiBzdHlsZT0iZmlsbDp1cmwoI1NWR0lEXzFfKTsiIHBvaW50cz0iMS41LC0wLjUgMC41LC0wLjUgMC41LC0xLjUgMS41LC0xLjUgCQkiLz4NCgk8L2c+DQo8L3BhdHRlcm4+DQo8cmVjdCBzdHlsZT0ib3BhY2l0eTowLjY7ZmlsbDp1cmwoI05ld19QYXR0ZXJuXzQpOyIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIi8+DQo8L3N2Zz4=');
+}
+
+.slider-content .pre-title {
+	font-family: 'Playball', cursive;
+	font-weight: normal;
+	font-size: 50px;
+	margin: 15px 0;
+}
+
+.slider-content i {
+	line-height: 1;
+}
+
+.slider-content i.small-icon {
+	font-size: 2.5em;
+}
+
+.slider-content .title {
+	font-family: 'Playball', cursive;
+	font-weight: normal;
+	font-size: 75px;
+	margin: 15px 0;
+}
+
+.slider-content .title i {
+	transform: translateY(10px);
+	font-size: 0.8em;
+	color: #e45f74;
+}
+
+.slider-content .date {
+	font-size: 20px;
+}
+
+.custom-color {
+	color: #e45f74;
+}
