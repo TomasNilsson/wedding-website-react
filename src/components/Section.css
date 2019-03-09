@@ -1,0 +1,29 @@
+.section {
+	padding: 70px 20px;
+	width: 100%;
+	max-width: 740px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.section-heading {
+	padding-bottom: 30px;
+}
+
+.section-heading h2 {
+	font-family: 'Playball', cursive;
+	font-weight: normal;
+	font-size: 56px;
+	margin: 0;
+}
+
+.section-heading:after {
+	content: '';
+	background: url('../images/separator.png') no-repeat center center;
+	height: 50px;
+	display: block;
+}
+
+.section-text {
+	line-height: 1.5em;
+}

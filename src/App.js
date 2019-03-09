@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Header from './components/Header'
+import Section from './components/Section'
+import text from './text.json'
 import './App.css'
 
 class App extends Component {
@@ -7,6 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Section title={'Vår historia'} text={text.ourStory} />
       </div>
     )
   }
