@@ -8,8 +8,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Section title={'Vår historia'} text={text.ourStory} />
+        <Header scrollTo={'ourStory'} />
+        <Section title={'Vår historia'} text={text.ourStory} id={'ourStory'} />
       </div>
     )
   }

@@ -1,8 +1,8 @@
 import React from 'react'
 import './Section.css'
 
-const Section = ({ title, text }) => (
-	<section className="section">
+const Section = ({ title, text, id }) => (
+	<section className="section" id={id}>
 		<div className="section-heading">
 			<h2>{title}</h2>
 		</div>

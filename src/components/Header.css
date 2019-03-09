@@ -62,3 +62,34 @@
 .count-down {
 	margin-top: 35px;
 }
+
+.slider-scroll i {
+	margin-top: 35px;
+	color: #fff;
+	position: relative;
+	font-size: 3rem;
+	z-index: 3;
+	top: 3rem;
+}
+
+.fade-down {
+	animation-name: fade-down;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: fade-down;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes fade-down {
+	0% {
+		-webkit-transform: translatey(-20px);
+		transform: translatey(-20px);
+		opacity: 0.8;
+	}
+	100% {
+		-webkit-transform: translatey(20px);
+		transform: translatey(20px);
+		opacity: 0;
+	}
+}
