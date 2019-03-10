@@ -1,32 +1,32 @@
 .section {
-	padding: 70px 20px 20px;
-	box-sizing: border-box;
+  padding: 70px 20px 20px;
+  box-sizing: border-box;
 }
 
 .section-text-wrapper {
-	width: 100%;
-	max-width: 740px;
-	margin: 0 auto;
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
 }
 
 .section-heading {
-	padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .section-heading h2 {
-	font-family: 'Playball', cursive;
-	font-weight: normal;
-	font-size: 56px;
-	margin: 0;
+  font-family: 'Playball', cursive;
+  font-weight: normal;
+  font-size: 56px;
+  margin: 0;
 }
 
 .section-heading:after {
-	content: '';
-	background: url('../images/separator.png') no-repeat center center;
-	height: 50px;
-	display: block;
+  content: '';
+  background: url('../images/separator.png') no-repeat center center;
+  height: 50px;
+  display: block;
 }
 
 .section-text {
-	line-height: 1.5em;
+  line-height: 1.5em;
 }

@@ -1,41 +1,41 @@
 .image-section {
-	position: relative;
-	z-index: 1;
-	background-image: url(../images/full-width-image.jpg);
-	background-size: cover;
-	color: #fff;
-	padding: 100px 0 70px;
+  position: relative;
+  z-index: 1;
+  background-image: url(../images/full-width-image.jpg);
+  background-size: cover;
+  color: #fff;
+  padding: 100px 0 70px;
 }
 
 .image-section:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: -1;
-	background: rgba(0, 0, 0, 0.5);
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .image-section-text-wrapper {
-	width: 100%;
-	max-width: 740px;
-	margin: 0 auto;
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
 }
 
 .image-section-heading {
-	padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .image-section-heading h2 {
-	font-family: 'Playball', cursive;
-	font-weight: normal;
-	font-size: 56px;
-	margin: 0;
+  font-family: 'Playball', cursive;
+  font-weight: normal;
+  font-size: 56px;
+  margin: 0;
 }
 
 .image-section-text {
-	line-height: 1.5em;
-	font-size: 25px;
+  line-height: 1.5em;
+  font-size: 25px;
 }
