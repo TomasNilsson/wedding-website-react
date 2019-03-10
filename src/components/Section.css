@@ -1,9 +1,12 @@
 .section {
 	padding: 70px 20px;
+	box-sizing: border-box;
+}
+
+.section-text-wrapper {
 	width: 100%;
 	max-width: 740px;
 	margin: 0 auto;
-	box-sizing: border-box;
 }
 
 .section-heading {

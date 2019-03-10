@@ -1,0 +1,18 @@
+.timeline {
+	padding-top: 10px;
+	width: 100%;
+	max-width: 1140px;
+	margin: 10px auto;
+	position: relative;
+}
+
+.timeline:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -0.5px;
+	width: 1px;
+	background: #ccc;
+}

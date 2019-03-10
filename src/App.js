@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Header from './components/Header'
 import Section from './components/Section'
-import text from './text.json'
+import Timeline from './components/Timeline'
+import content from './content.json'
 import './App.css'
 
 class App extends Component {
@@ -9,7 +10,12 @@ class App extends Component {
     return (
       <div className="App">
         <Header scrollTo={'ourStory'} />
-        <Section title={'Vår historia'} text={text.ourStory} id={'ourStory'} />
+        <Section
+          title={'Vår historia'}
+          text={content.ourStory}
+          id={'ourStory'}
+          childComponent={<Timeline items={content.timeline} />}
+        />
       </div>
     )
   }

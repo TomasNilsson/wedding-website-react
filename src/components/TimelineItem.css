@@ -1,0 +1,132 @@
+.col-xs-12 {
+	flex: 0 0 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	position: relative;
+}
+
+@media (min-width: 768px) {
+	.col-md-6 {
+		flex: 0 0 50%;
+		max-width: 50%;
+		box-sizing: border-box;
+	}
+}
+
+.timeline-item {
+	padding-bottom: 50px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.story-img {
+	height: 17rem;
+	width: 100%;
+	border-radius: 3px;
+	background: url(../images/1000x500.png) no-repeat scroll center center / cover
+		rgba(0, 0, 0, 0);
+}
+
+.timeline-thumbnail-left {
+	margin-right: 70px;
+}
+
+.timeline-thumbnail-right {
+	margin-left: 70px;
+}
+
+.timeline-title {
+	font-size: 25px;
+	font-weight: 300;
+	margin: 10px 0;
+}
+
+.timeline-arrow {
+	position: absolute;
+	top: 36px;
+}
+
+.timeline-arrow:after,
+.timeline-arrow:before {
+	border: medium solid transparent;
+	content: ' ';
+	position: absolute;
+}
+
+.timeline-left-side .timeline-arrow {
+	right: 33px;
+}
+
+.timeline-left-side .timeline-arrow:after,
+.timeline-left-side .timeline-arrow:before {
+	right: 100%;
+}
+
+.timeline-left-side .timeline-arrow:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #fff;
+	border-width: 6px;
+	margin-top: -6px;
+}
+
+.timeline-left-side .timeline-arrow:before {
+	border-color: rgba(222, 3, 127, 0);
+	border-right-color: #e45f74;
+	border-width: 7px;
+	margin-top: -7px;
+}
+
+.timeline-left-side {
+	padding-right: 70px;
+	text-align: right;
+}
+
+.timeline-right-side {
+	padding-left: 70px;
+	text-align: left;
+}
+
+.timeline-right-side .timeline-arrow {
+	left: 33px;
+}
+
+.timeline-right-side .timeline-arrow:after,
+.timeline-right-side .timeline-arrow:before {
+	left: 100%;
+}
+
+.timeline-right-side .timeline-arrow:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #fff;
+	border-width: 6px;
+	margin-top: -6px;
+}
+
+.timeline-right-side .timeline-arrow:before {
+	border-color: rgba(222, 3, 127, 0);
+	border-left-color: #e45f74;
+	border-width: 7px;
+	margin-top: -7px;
+}
+
+.date-circle:after {
+	background: none repeat scroll 0 0 #e45f74;
+	border: 3px solid #ececec;
+	border-radius: 50%;
+	content: '';
+	position: absolute;
+	top: 25px;
+	width: 15px;
+	height: 15px;
+	z-index: 20;
+}
+
+.timeline-left-side.date-circle:after {
+	right: -10.5px;
+}
+
+.timeline-right-side.date-circle:after {
+	left: -10.5px;
+}
