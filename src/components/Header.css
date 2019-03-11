@@ -23,7 +23,7 @@
 }
 
 .slider-content .pre-title {
-  font-family: 'Playball', cursive;
+  font-family: 'Great Vibes', cursive;
   font-weight: normal;
   font-size: 50px;
   margin: 15px 0;
@@ -38,7 +38,7 @@
 }
 
 .slider-content .title {
-  font-family: 'Playball', cursive;
+  font-family: 'Great Vibes', cursive;
   font-weight: normal;
   font-size: 85px;
   margin: 15px 0;
@@ -47,16 +47,17 @@
 .slider-content .title i {
   transform: translateY(10px);
   font-size: 0.8em;
-  color: #e45f74;
+  color: #890f3a;
 }
 
 .slider-content .date {
-  font-size: 25px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
   margin: 15px 0;
 }
 
 .custom-color {
-  color: #e45f74;
+  color: #890f3a;
 }
 
 .count-down {
