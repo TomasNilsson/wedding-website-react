@@ -27,6 +27,21 @@ class App extends Component {
           text={content.info.text}
           id={'info'}
         />
+		<ImageSection
+          title={content.map.title}
+          text={content.map.text}
+          id={'map'}
+        />
+		<Section
+          title={content.miscInfo.title}
+          text={content.miscInfo.text}
+          id={'miscInfo'}
+        />
+		<Section
+          title={content.wishes.title}
+          text={content.wishes.text}
+          id={'wishes'}
+        />
       </div>
     )
   }
