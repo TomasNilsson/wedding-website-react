@@ -1,0 +1,10 @@
+.map-section {
+  height: 450px;
+  display: flex;
+  box-shadow: 1px 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.map-section-wrapper {
+  display: flex;
+  flex: 0 0 50%;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './components/Header'
 import ImageSection from './components/ImageSection'
+import MapSection from './components/MapSection'
 import Section from './components/Section'
 import Timeline from './components/Timeline'
 import content from './content.json'
@@ -27,17 +28,18 @@ class App extends Component {
           text={content.info.text}
           id={'info'}
         />
-		<ImageSection
-          title={content.map.title}
-          text={content.map.text}
+        <MapSection
+          center={content.map.center}
+          zoom={11}
+          locations={content.map.locations}
           id={'map'}
         />
-		<Section
+        <Section
           title={content.miscInfo.title}
           text={content.miscInfo.text}
           id={'miscInfo'}
         />
-		<Section
+        <Section
           title={content.wishes.title}
           text={content.wishes.text}
           id={'wishes'}

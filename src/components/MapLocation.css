@@ -1,0 +1,17 @@
+.map-location-wrapper {
+  flex: 0 0 50%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.map-location-title h2 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: normal;
+  font-size: 56px;
+  margin: 0;
+}
+
+.map-location-title i {
+  margin-right: 15px;
+  color: #890f3a;
+}
