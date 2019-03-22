@@ -7,4 +7,5 @@
 .map-section-wrapper {
   display: flex;
   flex: 0 0 50%;
+  flex-wrap: wrap;
 }
