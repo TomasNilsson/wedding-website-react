@@ -94,3 +94,25 @@
     opacity: 0;
   }
 }
+
+.fade-enter {
+  opacity: 0.01;
+  transform: scale(1.1);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 700ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-exit-active {
+  opacity: 0.01;
+  transform: scale(1.1);
+  transition: all 700ms;
+}
