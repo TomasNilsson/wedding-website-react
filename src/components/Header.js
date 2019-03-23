@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { Link, animateScroll as scroll } from 'react-scroll'
 import Countdown from './Countdown'
 import Input from './Input'
 import './Header.css'
@@ -38,9 +39,14 @@ const Header = ({
               </h5>
               <Countdown date={date} className={'count-down'} />
               <div className="slider-scroll">
-                <a className="scroll-link" href={`#${scrollTo}`}>
+                <Link
+                  className="scroll-link"
+                  to={scrollTo}
+                  smooth={true}
+                  duration={800}
+                >
                   <i className="fa fa-angle-down fade-down" />
-                </a>
+                </Link>
               </div>
             </Fragment>
           </CSSTransition>

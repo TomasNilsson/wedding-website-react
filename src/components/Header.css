@@ -71,6 +71,7 @@
   font-size: 3rem;
   z-index: 3;
   top: 3rem;
+  cursor: pointer;
 }
 
 .fade-down {

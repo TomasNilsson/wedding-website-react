@@ -8,6 +8,7 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8",
+    "react-scroll": "^1.7.11",
     "react-transition-group": "^2.7.0"
   },
   "scripts": {
