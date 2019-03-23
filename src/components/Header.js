@@ -43,7 +43,8 @@ const Header = ({
                   className="scroll-link"
                   to={scrollTo}
                   smooth={true}
-                  duration={800}
+                  offset={-70}
+                  duration={1000}
                 >
                   <i className="fa fa-angle-down fade-down" />
                 </Link>

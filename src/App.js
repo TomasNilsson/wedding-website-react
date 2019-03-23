@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import Header from './components/Header'
 import ImageSection from './components/ImageSection'
 import MapSection from './components/MapSection'
+import Navbar from './components/Navbar'
 import Section from './components/Section'
 import Timeline from './components/Timeline'
 import content from './content.json'
@@ -27,9 +28,24 @@ class App extends Component {
 
     return (
       <div className="App">
+        {isLoggedIn && (
+          <Navbar
+            items={[
+              'ourStory',
+              'hashtag',
+              'info',
+              'map',
+              'miscInfo',
+              'wishlist',
+            ].map(item => ({
+              id: content[item].id,
+              title: content[item].title,
+            }))}
+          />
+        )}
         <Header
           {...content.header}
-          scrollTo={'ourStory'}
+          scrollTo={content.ourStory.id}
           isLoggedIn={isLoggedIn}
           onInputChange={this.checkSecretCode}
         />
@@ -38,34 +54,34 @@ class App extends Component {
             <Section
               title={content.ourStory.title}
               text={content.ourStory.text}
-              id={'ourStory'}
+              id={content.ourStory.id}
               childComponent={<Timeline items={content.timeline} />}
             />
             <ImageSection
               title={content.hashtag.title}
               text={content.hashtag.text}
-              id={'hashtag'}
+              id={content.hashtag.id}
             />
             <Section
               title={content.info.title}
               text={content.info.text}
-              id={'info'}
+              id={content.info.id}
             />
             <MapSection
               center={content.map.center}
               zoom={11}
               locations={content.map.locations}
-              id={'map'}
+              id={content.map.id}
             />
             <Section
               title={content.miscInfo.title}
               text={content.miscInfo.text}
-              id={'miscInfo'}
+              id={content.miscInfo.id}
             />
             <Section
-              title={content.wishes.title}
-              text={content.wishes.text}
-              id={'wishes'}
+              title={content.wishlist.title}
+              text={content.wishlist.text}
+              id={content.wishlist.id}
             />
           </Fragment>
         )}
