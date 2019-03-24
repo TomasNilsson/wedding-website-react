@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
 import './Section.css'
 
 const Section = ({ title, text, id, childComponent }) => (
@@ -7,12 +8,7 @@ const Section = ({ title, text, id, childComponent }) => (
       <div className="section-heading">
         <h2>{title}</h2>
       </div>
-      {text &&
-        text.split('\n').map((item, i) => (
-          <p className="section-text" key={i}>
-            {item}
-          </p>
-        ))}
+      {text && <ReactMarkdown source={text} className="section-text" />}
     </div>
     {childComponent}
   </section>

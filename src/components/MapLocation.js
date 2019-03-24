@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
 import './MapLocation.css'
 
 const MapLocation = ({ icon, title, text }) => (
@@ -9,12 +10,7 @@ const MapLocation = ({ icon, title, text }) => (
         {title}
       </h2>
     </div>
-    {text &&
-      text.split('\n').map((item, i) => (
-        <p className="map-location-text" key={i}>
-          {item}
-        </p>
-      ))}
+    {text && <ReactMarkdown source={text} className="map-location-text" />}
   </div>
 )
 
