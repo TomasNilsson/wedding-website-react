@@ -44,11 +44,19 @@
   height: 100%;
 }
 
+.nav-items {
+  padding-left: 0;
+}
+
 .nav-item {
   display: inline;
   margin-left: 2rem;
   color: #333;
   font-weight: 700;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
 }
 
 .nav-transparent .nav-item {
