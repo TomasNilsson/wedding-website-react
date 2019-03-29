@@ -73,7 +73,7 @@
 
 .timeline-left-side .timeline-arrow:before {
   border-color: rgba(222, 3, 127, 0);
-  border-right-color: #e45f74;
+  border-right-color: #890f3a;
   border-width: 7px;
   margin-top: -7px;
 }
@@ -106,13 +106,13 @@
 
 .timeline-right-side .timeline-arrow:before {
   border-color: rgba(222, 3, 127, 0);
-  border-left-color: #e45f74;
+  border-left-color: #890f3a;
   border-width: 7px;
   margin-top: -7px;
 }
 
 .date-circle:after {
-  background: none repeat scroll 0 0 #e45f74;
+  background: none repeat scroll 0 0 #890f3a;
   border: 3px solid #ececec;
   border-radius: 50%;
   content: '';

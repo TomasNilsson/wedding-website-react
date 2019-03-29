@@ -20,7 +20,7 @@ const styles = {
     cursor: 'pointer',
   },
   hover: {
-    border: '5px solid #e45f74',
+    border: '5px solid #890f3a',
     color: '#000000',
   },
 }

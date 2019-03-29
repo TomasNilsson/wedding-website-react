@@ -58,12 +58,12 @@
 }
 
 .nav-item > .active {
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #890f3a;
 }
 
 .nav-item:hover {
   color: #000;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #890f3a;
   cursor: pointer;
 }
 
