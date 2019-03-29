@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import FormsSection from './components/FormsSection'
 import Header from './components/Header'
 import ImageSection from './components/ImageSection'
 import MapSection from './components/MapSection'
@@ -37,6 +38,7 @@ class App extends Component {
               'map',
               'miscInfo',
               'wishlist',
+              'rsvp',
             ].map(item => ({
               id: content[item].id,
               title: content[item].title,
@@ -82,6 +84,11 @@ class App extends Component {
               title={content.wishlist.title}
               text={content.wishlist.text}
               id={content.wishlist.id}
+            />
+            <FormsSection
+              title={content.rsvp.title}
+              forms={content.rsvp.forms}
+              id={content.rsvp.id}
             />
           </Fragment>
         )}
