@@ -10,7 +10,7 @@
 }
 
 .section-heading {
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .section-heading h2 {
@@ -29,4 +29,24 @@
 
 .section-text {
   line-height: 1.5em;
+}
+
+.section-text ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0;
+}
+
+.section-text h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.section-text a {
+  color: #890f3a;
+  text-decoration: none;
+}
+
+.section-text a:hover {
+  text-decoration: underline;
 }
