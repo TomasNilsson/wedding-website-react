@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import FormsSection from './components/FormsSection'
 import Header from './components/Header'
 import ImageSection from './components/ImageSection'
+import InstagramWall from './components/InstagramWall'
 import MapSection from './components/MapSection'
 import Navbar from './components/Navbar'
 import Section from './components/Section'
@@ -63,6 +64,9 @@ class App extends Component {
               title={content.hashtag.title}
               text={content.hashtag.text}
               id={content.hashtag.id}
+              childComponent={
+                <InstagramWall wallUrl={content.hashtag.wallUrl} />
+              }
             />
             <Section
               title={content.info.title}

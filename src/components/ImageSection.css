@@ -39,3 +39,11 @@
   line-height: 1.5em;
   font-size: 25px;
 }
+
+.image-section-child-wrapper {
+  width: 100%;
+  max-width: 850px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+}

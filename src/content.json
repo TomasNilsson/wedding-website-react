@@ -23,7 +23,8 @@
   "hashtag": {
     "id": "hashtag",
     "title": "#OurWedding",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "wallUrl": "https://walls.io/r3jeq?nobackground=1&show_header=0&columns=5"
   },
   "info": {
     "id": "info",

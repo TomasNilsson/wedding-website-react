@@ -1,0 +1,13 @@
+.instagram-wall-wrapper {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.instagram-wall-iframe {
+  border: 0;
+  height: 270px;
+  width: 1400px;
+  margin: 0 -280px;
+}
