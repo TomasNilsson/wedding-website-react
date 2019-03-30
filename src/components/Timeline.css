@@ -4,6 +4,10 @@
   max-width: 1140px;
   margin: 10px auto;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .timeline:after {
@@ -15,4 +19,23 @@
   margin-left: -0.5px;
   width: 1px;
   background: #ccc;
+}
+
+.timeline-spacing {
+  padding-bottom: 65px;
+}
+
+.col-xs-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+  }
 }
