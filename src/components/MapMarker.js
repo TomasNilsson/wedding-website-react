@@ -15,7 +15,7 @@ const styles = {
     backgroundColor: '#ffffff',
     textAlign: 'center',
     color: '#890f3a',
-    fontSize: 33,
+    fontSize: 35,
     padding: 4,
     cursor: 'pointer',
   },

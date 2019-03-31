@@ -18,7 +18,7 @@ const Header = ({
     <div className="slider-content">
       <h3 className="pre-title">{title}</h3>
       <h1 className="title">
-        {names[0]} <i className="icon icon-heart" /> {names[1]}
+        {names[0]} <i className="icon icon-hearts" /> {names[1]}
       </h1>
       {!isLoggedIn && (
         <Input type="password" label={inputLabel} onChange={onInputChange} />
