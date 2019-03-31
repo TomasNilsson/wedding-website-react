@@ -4,8 +4,9 @@
   background-image: url(../images/full-width-image.jpg);
   background-size: cover;
   color: #fff;
-  padding: 100px 0 70px;
+  padding: 100px 20px 70px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .forms-section:after {
@@ -20,20 +21,25 @@
 }
 
 .forms-section-wrapper {
-  flex: 0 0 50%;
+  flex: 0 0 100%;
+  max-width: 100%;
   flex-wrap: wrap;
-  padding: 0 100px;
+  padding: 0 0 50px;
   box-sizing: border-box;
 }
 
-.forms-section-heading {
-  padding-bottom: 30px;
+@media (min-width: 992px) {
+  .forms-section-wrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 100px;
+  }
 }
 
 .forms-section-heading h2 {
   font-family: 'Playball', cursive;
   font-weight: normal;
-  font-size: 56px;
+  font-size: 50px;
   margin: 0;
 }
 

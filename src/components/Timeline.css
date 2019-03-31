@@ -21,21 +21,12 @@
   background: #ccc;
 }
 
+.timeline-column {
+  flex: 0 0 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
 .timeline-spacing {
   padding-bottom: 65px;
-}
-
-.col-xs-12 {
-  flex: 0 0 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  position: relative;
-}
-
-@media (min-width: 768px) {
-  .col-md-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-    box-sizing: border-box;
-  }
 }

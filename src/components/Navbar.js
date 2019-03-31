@@ -27,7 +27,9 @@ class Navbar extends Component {
     return (
       <header>
         <nav
-          className={`nav${this.state.isTop ? ' nav-transparent' : ''}`}
+          className={`nav d-none d-lg-block${
+            this.state.isTop ? ' nav-transparent' : ''
+          }`}
           id="navbar"
         >
           <div className="nav-content">

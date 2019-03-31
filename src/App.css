@@ -17,6 +17,20 @@
   font-style: normal;
 }
 
+.d-none {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .d-lg-block {
+    display: block;
+  }
+
+  .d-lg-flex {
+    display: flex;
+  }
+}
+
 [data-icon]:before {
   font-family: 'font-icon' !important;
   content: attr(data-icon);

@@ -3,8 +3,8 @@ import TimelineItem from './TimelineItem'
 import './Timeline.css'
 
 const Timeline = ({ items }) => (
-  <div className="timeline">
-    <div className="timeline-left col-xs-12 col-md-6">
+  <div className="timeline d-none d-lg-flex">
+    <div className="timeline-column">
       {items &&
         items
           .filter(item => item.side === 'left')
@@ -17,7 +17,7 @@ const Timeline = ({ items }) => (
             />
           ))}
     </div>
-    <div className="timeline-right col-xs-12 col-md-6">
+    <div className="timeline-column">
       <div className="timeline-spacing" />
       {items &&
         items
