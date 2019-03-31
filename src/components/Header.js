@@ -16,10 +16,7 @@ const Header = ({
 }) => (
   <div className="main-slider">
     <div className="slider-content">
-      <h3 className="pre-title">
-        <span className="custom-color">{title.charAt(0)}</span>
-        {title.slice(1)}
-      </h3>
+      <h3 className="pre-title">{title}</h3>
       <h1 className="title">
         {names[0]} <i className="icon icon-heart" /> {names[1]}
       </h1>
