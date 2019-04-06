@@ -66,10 +66,12 @@ class FormsSection extends Component {
                 center
                 classNames={{
                   modal: 'forms-section-modal',
+                  overlay: 'forms-section-modal-overlay',
                   closeIcon: 'forms-section-modal-close',
                 }}
               >
                 <iframe
+                  className="forms-section-modal-iframe"
                   title={form.title}
                   src={form.url}
                   width="640"

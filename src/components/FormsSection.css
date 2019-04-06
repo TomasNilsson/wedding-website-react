@@ -72,8 +72,29 @@
 }
 
 .forms-section-modal {
-  border-radius: 5px;
-  padding-right: 50px;
+  max-width: 100%;
+  padding: 50px 10px;
+}
+
+.forms-section-modal-overlay {
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .forms-section-modal-overlay {
+    padding: 1.2rem;
+  }
+
+  .forms-section-modal {
+    border-radius: 5px;
+    padding: 1.2rem;
+    padding-right: 50px;
+    max-width: 800px;
+  }
+}
+
+.forms-section-modal-iframe {
+  max-width: 100%;
 }
 
 .forms-section-modal-close {
