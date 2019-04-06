@@ -100,5 +100,10 @@
         "url": "https://docs.google.com/forms/d/e/1FAIpQLSfhXgh2KI8hz0dqCJlRqPib3kot-gEtBD9-xnySjaNRDncm5Q/viewform?embedded=true"
       }
     ]
+  },
+  "footer": {
+    "id": "footer",
+    "title": "",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua: \n * Alice: 07X-XXX XX XX \n * Bob: 07X-XXX XX XX\n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua: [wedding@gmail.com](mailto:wedding@gmail.com)"
   }
 }
