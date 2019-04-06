@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link, scroller } from 'react-scroll'
+import MobileMenu from './MobileMenu'
+import MobileMenuButton from './MobileMenuButton'
+import MobileMenuItem from './MobileMenuItem'
 import './Navbar.css'
 
 class Navbar extends Component {
@@ -9,6 +12,7 @@ class Navbar extends Component {
 
     this.state = {
       isTop: true,
+      mobileMenuOpen: false,
     }
   }
 
@@ -21,18 +25,58 @@ class Navbar extends Component {
     })
   }
 
-  componentWillUnmount() {}
+  handleMenuClick() {
+    this.setState({ mobileMenuOpen: !this.state.mobileMenuOpen })
+  }
+
+  handleLinkClick(to) {
+    this.setState({ mobileMenuOpen: false })
+    scroller.scrollTo(to, {
+      smooth: true,
+      offset: -25,
+      duration: 1000,
+    })
+  }
 
   render() {
+    const mobileMenuItems = this.props.items.map((item, index) => {
+      return (
+        <MobileMenuItem
+          key={index}
+          delay={`${index * 0.1}s`}
+          onClick={() => {
+            this.handleLinkClick(item.id)
+          }}
+        >
+          {item.title}
+        </MobileMenuItem>
+      )
+    })
+
     return (
       <header>
         <nav
-          className={`nav d-none d-lg-block${
-            this.state.isTop ? ' nav-transparent' : ''
+          className={`nav ${
+            this.state.isTop || this.state.mobileMenuOpen
+              ? ' nav-transparent'
+              : ''
           }`}
           id="navbar"
         >
-          <div className="nav-content">
+          <MobileMenuButton
+            open={this.state.mobileMenuOpen}
+            onClick={() => this.handleMenuClick()}
+            color={
+              this.state.isTop || this.state.mobileMenuOpen
+                ? '#ffffff'
+                : '#000000'
+            }
+            className="nav-mobile-menu-button d-lg-none"
+          />
+          <div className="nav-icon d-lg-none">
+            <i className="icon icon-hearts" />
+          </div>
+          <div className="nav-content d-none d-lg-flex">
             <ul className="nav-items">
               {this.props.items.map(item => (
                 <li className="nav-item" key={item.id}>
@@ -51,6 +95,9 @@ class Navbar extends Component {
             </ul>
           </div>
         </nav>
+        <MobileMenu open={this.state.mobileMenuOpen}>
+          {mobileMenuItems}
+        </MobileMenu>
       </header>
     )
   }

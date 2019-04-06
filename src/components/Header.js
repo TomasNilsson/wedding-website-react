@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link } from 'react-scroll'
 import Countdown from './Countdown'
 import Input from './Input'
 import './Header.css'

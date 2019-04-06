@@ -2,7 +2,7 @@
   position: fixed;
   top: 0px;
   width: 100%;
-  height: 80px;
+  height: 40px;
   z-index: 1000;
   background-color: #fff;
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
@@ -12,8 +12,17 @@
 .nav-transparent {
   background-color: transparent;
   box-shadow: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   animation: background_transparent 1s;
+}
+
+@media (min-width: 992px) {
+  .nav {
+    height: 80px;
+  }
+
+  .nav-transparent {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
 }
 
 @keyframes background_transparent {
@@ -32,6 +41,52 @@
   to {
     background-color: #fff;
   }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.nav-mobile-menu-button {
+  position: absolute;
+  z-index: 1000;
+}
+
+.nav .nav-icon {
+  margin: 0 auto;
+  color: #890f3a;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  font-size: 28px;
+  padding: 5px 0;
+}
+
+.nav-transparent .nav-icon {
+  display: none;
 }
 
 .nav .nav-content {
@@ -56,7 +111,7 @@
 }
 
 .nav-item:first-child {
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 
 .nav-transparent .nav-item {

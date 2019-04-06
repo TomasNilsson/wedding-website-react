@@ -66,15 +66,19 @@
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 @media (min-width: 992px) {
   .d-lg-block {
-    display: block;
+    display: block !important;
   }
 
   .d-lg-flex {
-    display: flex;
+    display: flex !important;
+  }
+
+  .d-lg-none {
+    display: none !important;
   }
 }
