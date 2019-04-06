@@ -5,11 +5,23 @@
 .countdown-col-element {
   display: flex;
   flex-direction: column;
-  margin: 0 20px;
+  margin: 0 12px;
+  font-size: 12px;
   font-family: 'Raleway';
 }
 
 .countdown-col-element-number {
-  font-size: 40px;
+  font-size: 25px;
   font-family: 'Lato';
+}
+
+@media (min-width: 992px) {
+  .countdown-col-element {
+    margin: 0 20px;
+    font-size: 16px;
+  }
+
+  .countdown-col-element-number {
+    font-size: 40px;
+  }
 }

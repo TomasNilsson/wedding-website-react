@@ -107,7 +107,8 @@
   display: inline;
   margin-left: 2rem;
   color: #333;
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .nav-item:first-child {

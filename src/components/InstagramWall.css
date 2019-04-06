@@ -1,13 +1,19 @@
 .instagram-wall-wrapper {
   width: 100%;
-  max-width: 850px;
+  max-width: 287px;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .instagram-wall-iframe {
   border: 0;
-  height: 270px;
+  height: 267px;
   width: 1400px;
   margin-left: 7px;
+}
+
+@media (min-width: 992px) {
+  .instagram-wall-wrapper {
+    max-width: 850px;
+  }
 }

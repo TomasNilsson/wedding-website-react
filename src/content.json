@@ -32,13 +32,13 @@
   "hashtag": {
     "id": "hashtag",
     "title": "#OurWedding",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "text": "Follow the hashtag [#OurWedding](https://www.instagram.com/explore/tags/ourwedding/). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "wallUrl": "https://walls.io/r3jeq?nobackground=1&show_header=0&columns=5"
   },
   "info": {
     "id": "info",
     "title": "Info",
-    "text": "## Church and Wedding Ceremony\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n## Wedding Party\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n## Speeches\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n* Toastmaster, [toastmaster@gmail.com](mailto:toastmaster@gmail.com), 07X-XXX XX XX\n* Toastmadame, [toastmadame@gmail.com](mailto:toastmadame@gmail.com), 07X-XXX XX XX\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n## Bus\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "text": "## Church and Wedding Ceremony\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n## Wedding Party\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n## Speeches\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n* Toastmaster, [toastmaster@gmail.com](mailto:toastmaster@gmail.com), 07X-XXX XX XX\n* Toastmadame, [toastmadame@gmail.com](mailto:toastmadame@gmail.com), 07X-XXX XX XX\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n## Bus\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   "map": {
     "id": "map",
@@ -50,7 +50,7 @@
     "locations": [
       {
         "title": "Ceremony",
-        "text": "**When:** 14:00\n\n**Where:** Borlunda Kyrka, Eslöv.",
+        "text": "**When:** 14:00\n\n**Where:** Borlunda Kyrka, Eslöv",
         "icon": "rings",
         "latitude": "55.800718",
         "longitude": "13.3227702"
@@ -101,9 +101,14 @@
       }
     ]
   },
+  "contact": {
+    "id": "contact",
+    "title": "Contact Us",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:\n* Alice: 07X-XXX XX XX\n* Bob: 07X-XXX XX XX\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua: [wedding@gmail.com](mailto:wedding@gmail.com)"
+  },
   "footer": {
     "id": "footer",
     "title": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua: \n * Alice: 07X-XXX XX XX \n * Bob: 07X-XXX XX XX\n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua: [wedding@gmail.com](mailto:wedding@gmail.com)"
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }
 }

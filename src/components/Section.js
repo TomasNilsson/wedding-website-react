@@ -5,8 +5,8 @@ import './Section.css'
 const Section = ({ title, text, id, childComponent }) => (
   <section className="section" id={id}>
     <div className="section-text-wrapper">
-      <div className="section-heading">
-        <h2>{title}</h2>
+      <div className={title ? 'section-heading' : 'section-separator'}>
+        {title && <h2>{title}</h2>}
       </div>
       {text && <ReactMarkdown source={text} className="section-text" />}
     </div>

@@ -4,6 +4,7 @@
   z-index: 1;
   background-image: url(../images/header.jpg);
   background-size: cover;
+  background-position: center;
   color: #fff;
   display: flex;
   align-items: center;
@@ -29,7 +30,7 @@
 .slider-content .pre-title {
   font-family: 'Great Vibes', cursive;
   font-weight: normal;
-  font-size: 50px;
+  font-size: 40px;
   margin: 15px 0;
 }
 
@@ -44,8 +45,8 @@
 .slider-content .title {
   font-family: 'Great Vibes', cursive;
   font-weight: normal;
-  font-size: 85px;
-  margin: 15px 60px 15px 0;
+  font-size: 62px;
+  margin: 15px 0;
 }
 
 .slider-content .title i {
@@ -55,12 +56,8 @@
 }
 
 .slider-content .date {
-  font-size: 25px;
+  font-size: 20px;
   margin: 15px 0;
-}
-
-.custom-color {
-  color: #890f3a;
 }
 
 .count-down {
@@ -119,4 +116,18 @@
   opacity: 0.01;
   transform: scale(1.1);
   transition: all 700ms;
+}
+
+@media (min-width: 992px) {
+  .slider-content .pre-title {
+    font-size: 50px;
+  }
+
+  .slider-content .title {
+    font-size: 85px;
+  }
+
+  .slider-content .date {
+    font-size: 25px;
+  }
 }

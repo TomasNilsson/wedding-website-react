@@ -4,8 +4,9 @@
   background-image: url(../images/full-width-image.jpg);
   background-size: cover;
   color: #fff;
-  padding: 100px 20px 70px;
+  padding: 50px 20px;
   box-sizing: border-box;
+  margin-top: 30px;
 }
 
 .image-section:after {
@@ -30,17 +31,42 @@
   font-weight: normal;
   font-size: 50px;
   margin: 0;
+  overflow: auto;
 }
 
 .image-section-text {
   line-height: 1.5em;
-  font-size: 25px;
+  font-size: 20px;
+}
+
+.image-section-text a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.image-section-text a:hover {
+  text-decoration: underline;
 }
 
 .image-section-child-wrapper {
   width: 100%;
-  max-width: 850px;
+  max-width: 287px;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.6);
   margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .image-section {
+    padding: 70px 20px;
+  }
+
+  .image-section-text {
+    font-size: 23px;
+  }
+
+  .image-section-child-wrapper {
+    max-width: 850px;
+  }
 }

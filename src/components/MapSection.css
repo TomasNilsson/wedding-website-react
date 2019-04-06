@@ -3,6 +3,7 @@
   display: flex;
   box-shadow: 1px 10px 40px rgba(0, 0, 0, 0.4);
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .map-section-wrapper {

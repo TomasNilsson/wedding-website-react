@@ -94,10 +94,12 @@ class App extends Component {
               forms={content.rsvp.forms}
               id={content.rsvp.id}
             />
-			<Section
-              text={content.footer.text}
-              id={content.footer.id}
+            <Section
+              title={content.contact.title}
+              text={content.contact.text}
+              id={content.contact.id}
             />
+            <Section text={content.footer.text} id={content.footer.id} />
           </Fragment>
         )}
       </div>

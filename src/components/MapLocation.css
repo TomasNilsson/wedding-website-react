@@ -1,17 +1,29 @@
 .map-location-wrapper {
-  flex: 0 0 50%;
-  padding: 30px 20px;
+  padding: 20px;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 .map-location-title h2 {
   font-family: 'Great Vibes', cursive;
   font-weight: normal;
-  font-size: 56px;
+  font-size: 46px;
   margin: 0;
 }
 
 .map-location-title i {
   margin-right: 15px;
   color: #890f3a;
+}
+
+@media (min-width: 992px) {
+  .map-location-wrapper {
+    flex: 0 0 50%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+  }
+
+  .map-location-title h2 {
+    font-size: 56px;
+  }
 }
