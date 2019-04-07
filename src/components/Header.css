@@ -2,13 +2,13 @@
   height: 100vh;
   position: relative;
   z-index: 1;
-  background-image: url(../images/header.jpg);
   background-size: cover;
-  background-position: center;
+  background-color: #333333;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-image 2s linear;
 }
 
 .main-slider:after {

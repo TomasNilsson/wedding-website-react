@@ -3,7 +3,14 @@
     "title": "Wedding",
     "names": ["Alice", "Bob"],
     "date": "2030-10-05T14:00:00+01:00",
-    "inputLabel": "Enter password"
+    "inputLabel": "Enter password",
+    "images": [
+      "https://res.cloudinary.com/wedding-website-terese-ulf/image/upload/w_1600/header/header_1.jpg",
+      "https://res.cloudinary.com/wedding-website-terese-ulf/image/upload/w_1600/header/header_2.jpg",
+      "https://res.cloudinary.com/wedding-website-terese-ulf/image/upload/w_1600/header/header_3.jpg",
+      "https://res.cloudinary.com/wedding-website-terese-ulf/image/upload/w_1600/header/header_4.jpg",
+      "https://res.cloudinary.com/wedding-website-terese-ulf/image/upload/w_1600/header/header_5.jpg"
+    ]
   },
   "ourStory": {
     "id": "ourStory",
