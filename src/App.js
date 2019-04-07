@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import FormsSection from './components/FormsSection'
 import Header from './components/Header'
 import ImageSection from './components/ImageSection'
@@ -29,7 +29,7 @@ class App extends Component {
     const { isLoggedIn } = this.state
 
     return (
-      <div className="App">
+      <div className="app">
         {isLoggedIn && (
           <Navbar
             items={[
@@ -53,7 +53,7 @@ class App extends Component {
           onInputChange={this.checkSecretCode}
         />
         {isLoggedIn && (
-          <Fragment>
+          <div className="app-content">
             <Section
               title={content.ourStory.title}
               text={content.ourStory.text}
@@ -100,7 +100,7 @@ class App extends Component {
               id={content.contact.id}
             />
             <Section text={content.footer.text} id={content.footer.id} />
-          </Fragment>
+          </div>
         )}
       </div>
     )

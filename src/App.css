@@ -59,10 +59,13 @@
   content: '\69';
 }
 
-.App {
+.app {
   text-align: center;
   font-family: 'Raleway', sans-serif;
   color: #000000;
+}
+
+.app-content {
   padding-bottom: 20px;
 }
 

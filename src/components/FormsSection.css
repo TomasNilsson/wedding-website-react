@@ -43,12 +43,12 @@
 
 .forms-section-text {
   line-height: 1.5em;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .forms-section-button {
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Raleway', sans-serif;
   background: #890f3a;
   padding: 20px;
@@ -99,6 +99,10 @@
 
   .forms-section-text {
     font-size: 23px;
+  }
+
+  .forms-section-button {
+    font-size: 20px;
   }
 
   .forms-section-modal-overlay {

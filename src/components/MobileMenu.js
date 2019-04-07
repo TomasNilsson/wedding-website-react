@@ -33,7 +33,7 @@ class MobileMenu extends Component {
         background: '#000000',
         color: '#fafafa',
         transition: 'height 0.3s ease',
-        zIndex: 2,
+        zIndex: 100,
       },
       menuList: {
         paddingTop: '3rem',
