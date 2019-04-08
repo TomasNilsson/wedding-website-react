@@ -67,7 +67,7 @@ class FormsSection extends Component {
                 classNames={{
                   modal: 'forms-section-modal',
                   overlay: 'forms-section-modal-overlay',
-                  closeIcon: 'forms-section-modal-close',
+                  closeButton: 'forms-section-modal-close',
                 }}
               >
                 <iframe

@@ -84,6 +84,7 @@
 
 .forms-section-modal-close {
   cursor: pointer;
+  outline: 0;
 }
 
 @media (min-width: 992px) {

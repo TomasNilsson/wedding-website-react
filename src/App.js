@@ -4,6 +4,7 @@ import Header from './components/Header'
 import ImageSection from './components/ImageSection'
 import InstagramWall from './components/InstagramWall'
 import MapSection from './components/MapSection'
+import Modal from './components/Modal'
 import Navbar from './components/Navbar'
 import Section from './components/Section'
 import Timeline from './components/Timeline'
@@ -55,9 +56,7 @@ class App extends Component {
         {isLoggedIn && (
           <div className="app-content">
             <Section
-              title={content.ourStory.title}
-              text={content.ourStory.text}
-              id={content.ourStory.id}
+              {...content.ourStory}
               childComponent={<Timeline items={content.timeline} />}
             />
             <ImageSection
@@ -68,11 +67,7 @@ class App extends Component {
                 <InstagramWall wallUrl={content.hashtag.wallUrl} />
               }
             />
-            <Section
-              title={content.info.title}
-              text={content.info.text}
-              id={content.info.id}
-            />
+            <Section {...content.info} />
             <MapSection
               center={content.map.center}
               zoom={11}
@@ -83,23 +78,22 @@ class App extends Component {
               title={content.miscInfo.title}
               text={content.miscInfo.text}
               id={content.miscInfo.id}
+              childComponent={
+                <Modal
+                  buttonText={content.miscInfo.modalButton}
+                  title={content.miscInfo.modalTitle}
+                  text={content.miscInfo.modalText}
+                />
+              }
             />
-            <Section
-              title={content.wishlist.title}
-              text={content.wishlist.text}
-              id={content.wishlist.id}
-            />
+            <Section {...content.wishlist} />
             <FormsSection
               title={content.rsvp.title}
               forms={content.rsvp.forms}
               id={content.rsvp.id}
             />
-            <Section
-              title={content.contact.title}
-              text={content.contact.text}
-              id={content.contact.id}
-            />
-            <Section text={content.footer.text} id={content.footer.id} />
+            <Section {...content.contact} />
+            <Section {...content.footer} />
           </div>
         )}
       </div>
