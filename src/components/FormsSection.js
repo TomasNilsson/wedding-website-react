@@ -75,7 +75,6 @@ class FormsSection extends Component {
                   title={form.title}
                   src={form.url}
                   width="640"
-                  height="1060"
                   frameBorder="0"
                   marginHeight="0"
                   marginWidth="0"

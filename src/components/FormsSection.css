@@ -7,6 +7,7 @@
   padding: 50px 20px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin-top: 30px;
 }
 
@@ -70,8 +71,10 @@
 }
 
 .forms-section-modal {
-  max-width: 100%;
-  padding: 50px 10px;
+  width: 100%;
+  height: 100%;
+  padding: 50px 10px 10px;
+  box-sizing: border-box;
 }
 
 .forms-section-modal-overlay {
@@ -80,6 +83,7 @@
 
 .forms-section-modal-iframe {
   max-width: 100%;
+  height: 100%;
 }
 
 .forms-section-modal-close {
@@ -87,15 +91,23 @@
   outline: 0;
 }
 
+@media (min-width: 768px) {
+  .forms-section-modal {
+    border-radius: 5px;
+    padding: 1.2rem;
+    padding-right: 50px;
+    width: auto;
+    max-width: 800px;
+  }
+
+  .forms-section-modal-overlay {
+    padding: 1.2rem;
+  }
+}
+
 @media (min-width: 992px) {
   .forms-section {
     padding: 70px 20px;
-  }
-
-  .forms-section-wrapper {
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding: 0 100px !important;
   }
 
   .forms-section-text {
@@ -105,15 +117,18 @@
   .forms-section-button {
     font-size: 20px;
   }
+}
 
-  .forms-section-modal-overlay {
-    padding: 1.2rem;
+@media (min-width: 1200px) {
+  .forms-section-wrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 50px !important;
   }
+}
 
-  .forms-section-modal {
-    border-radius: 5px;
-    padding: 1.2rem;
-    padding-right: 50px;
-    max-width: 800px;
+@media (min-width: 1440px) {
+  .forms-section-wrapper {
+    padding: 0 100px !important;
   }
 }

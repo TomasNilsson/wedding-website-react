@@ -22,9 +22,9 @@
 }
 
 .modal-component {
-  max-width: 100%;
   padding: 0 0 1.2rem;
-  height: 100%;
+  width: 100%;
+  min-height: 100%;
   box-sizing: border-box;
   text-align: center;
   font-family: 'Raleway', sans-serif;
@@ -39,11 +39,12 @@
   outline: 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .modal-component {
     border-radius: 5px;
+    width: auto;
     max-width: 800px;
-    height: auto;
+    min-height: 0;
   }
 
   .modal-overlay {

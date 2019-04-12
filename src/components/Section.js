@@ -8,7 +8,13 @@ const Section = ({ title, text, id, childComponent }) => (
       <div className={title ? 'section-heading' : 'section-separator'}>
         {title && <h2>{title}</h2>}
       </div>
-      {text && <ReactMarkdown source={text} className="section-text" />}
+      {text && (
+        <ReactMarkdown
+          source={text}
+          className="section-text"
+          linkTarget="_blank"
+        />
+      )}
     </div>
     {childComponent}
   </section>
