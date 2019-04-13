@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import PropTypes from 'prop-types'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Link } from 'react-scroll'
 import Countdown from './Countdown'
@@ -6,35 +7,9 @@ import Input from './Input'
 import './Header.css'
 
 class Header extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      backgroundImageUrl:
-        (this.props.images || []).length > 0 ? this.props.images[0] : null,
-      currentImageIndex: 0,
-    }
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.props.isLoggedIn !== prevProps.isLoggedIn) {
-      setInterval(this.updateBackgroundImage, 5000)
-    }
-  }
-
-  updateBackgroundImage = () => {
-    const images = this.props.images || []
-    if (images.length > 0) {
-      const nextImageIndex = (this.state.currentImageIndex + 1) % images.length
-      this.setState({
-        backgroundImageUrl: this.props.images[nextImageIndex],
-        currentImageIndex: nextImageIndex,
-      })
-    }
-  }
-
   render() {
     const {
+      images,
       title,
       names,
       date,
@@ -44,17 +19,24 @@ class Header extends Component {
       scrollTo,
     } = this.props
 
-    const { backgroundImageUrl } = this.state
-
     return (
       <div
         className="main-slider"
         style={
-          backgroundImageUrl
-            ? { backgroundImage: `url(${backgroundImageUrl})` }
-            : {}
+          images.length > 0 ? { backgroundImage: `url(${images[0]})` } : {}
         }
       >
+        {isLoggedIn &&
+          images.map((imageUrl, index) => (
+            <figure
+              key={index}
+              style={{
+                backgroundImage: `url(${imageUrl})`,
+                animationDuration: `${images.length * 5}s`,
+                animationDelay: `${index * 5}s`,
+              }}
+            />
+          ))}
         <div className="slider-content">
           <h3 className="pre-title">{title}</h3>
           <h1 className="title">
@@ -98,6 +80,20 @@ class Header extends Component {
       </div>
     )
   }
+}
+
+Header.propTypes = {
+  date: PropTypes.string,
+  images: PropTypes.array,
+  inputLabel: PropTypes.string,
+  isLoggedIn: PropTypes.bool,
+  names: PropTypes.array,
+  onInputChange: PropTypes.func,
+  scrollTo: PropTypes.string,
+}
+
+Header.defaultProps = {
+  images: [],
 }
 
 export default Header

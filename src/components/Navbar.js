@@ -58,7 +58,7 @@ class Navbar extends Component {
     return (
       <header>
         <nav
-          className={`nav ${
+          className={`nav${
             this.state.isTop || this.state.mobileMenuOpen
               ? ' nav-transparent'
               : ''
