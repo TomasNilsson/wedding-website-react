@@ -22,3 +22,12 @@
     max-width: 50%;
   }
 }
+
+.map-section a {
+  color: #890f3a;
+  text-decoration: none;
+}
+
+.map-section a:hover {
+  text-decoration: underline;
+}
