@@ -66,24 +66,24 @@
     "locations": [
       {
         "title": "Ceremony",
-        "text": "**When:** 14:00\n\n**Where:** Borlunda Kyrka, Eslöv",
+        "text": "**When:** 14:00\n\n**Where:** Borlunda Kyrka, Eslöv\n\n**Link:** [Google maps](https://goo.gl/maps/emwCfHeKa6F2)",
         "icon": "rings",
         "latitude": "55.800718",
         "longitude": "13.3227702"
       },
       {
         "title": "Party",
-        "text": "**Where:** Ellinge slott, Ellinge Gård, Eslöv",
+        "text": "**Where:** Ellinge slott, Ellinge Gård, Eslöv\n\n**Link:** [Google maps](https://goo.gl/maps/ZDo9Vwz5Jok)",
         "icon": "wine-glasses",
         "latitude": "55.81167275",
         "longitude": "13.287460530674393"
       },
       {
         "title": "Bus",
-        "text": "**Where:** Lund C, stop M",
+        "text": "**Where:** Lund C, stop M\n\n**Link:** [Skånetrafiken](https://www.skanetrafiken.se/globalassets/dokumentbank/terminalkartor2/2019/81216_lundc_terminalkarta_a3.pdf)",
         "icon": "bus",
-        "latitude": "55.707826",
-        "longitude": "13.186703"
+        "latitude": "55.706388",
+        "longitude": "13.187646"
       }
     ]
   },
