@@ -10,7 +10,13 @@ const MapLocation = ({ icon, title, text }) => (
         {title}
       </h2>
     </div>
-    {text && <ReactMarkdown source={text} className="map-location-text" />}
+    {text && (
+      <ReactMarkdown
+        source={text}
+        className="map-location-text"
+        linkTarget="_blank"
+      />
+    )}
   </div>
 )
 
