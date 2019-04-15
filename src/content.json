@@ -12,7 +12,7 @@
       "../images/header_1.jpg",
       "../images/header_2.jpg"
     ],
-    "images-mobile": [
+    "imagesMobile": [
       "../images/header_1_mobile.jpg",
       "../images/header_2_mobile.jpg",
       "../images/header_1_mobile.jpg",

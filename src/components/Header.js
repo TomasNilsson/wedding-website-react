@@ -10,6 +10,7 @@ class Header extends Component {
   render() {
     const {
       images,
+      imagesMobile,
       title,
       names,
       date,
@@ -19,20 +20,24 @@ class Header extends Component {
       scrollTo,
     } = this.props
 
+    const backgroundImages = window.innerWidth <= 768 ? imagesMobile : images
+
     return (
       <div
         className="main-slider"
         style={
-          images.length > 0 ? { backgroundImage: `url(${images[0]})` } : {}
+          backgroundImages.length > 0
+            ? { backgroundImage: `url(${backgroundImages[0]})` }
+            : {}
         }
       >
         {isLoggedIn &&
-          images.map((imageUrl, index) => (
+          backgroundImages.map((imageUrl, index) => (
             <figure
               key={index}
               style={{
                 backgroundImage: `url(${imageUrl})`,
-                animationDuration: `${images.length * 5}s`,
+                animationDuration: `${backgroundImages.length * 5}s`,
                 animationDelay: `${index * 5}s`,
               }}
             />
