@@ -2,7 +2,7 @@
   "header": {
     "title": "Wedding",
     "names": ["Alice", "Bob"],
-    "date": "2030-10-05T14:00:00+01:00",
+    "date": "2030-10-05T14:00:00+02:00",
     "inputLabel": "Enter password",
     "images": [
       "../images/header_1.jpg",
