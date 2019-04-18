@@ -70,17 +70,19 @@ class FormsSection extends Component {
                   closeButton: 'forms-section-modal-close',
                 }}
               >
-                <iframe
-                  className="forms-section-modal-iframe"
-                  title={form.title}
-                  src={form.url}
-                  width="640"
-                  frameBorder="0"
-                  marginHeight="0"
-                  marginWidth="0"
-                >
-                  Loading...
-                </iframe>
+                <div className="forms-section-modal-iframe-container">
+                  <iframe
+                    className="forms-section-modal-iframe"
+                    title={form.title}
+                    src={form.url}
+                    width="640"
+                    frameBorder="0"
+                    marginHeight="0"
+                    marginWidth="0"
+                  >
+                    Loading...
+                  </iframe>
+                </div>
               </Modal>
             </div>
           ))}

@@ -81,9 +81,15 @@
   padding: 0;
 }
 
+.forms-section-modal-iframe-container {
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
 .forms-section-modal-iframe {
   max-width: 100%;
-  height: 100%;
+  height: 99%;
 }
 
 .forms-section-modal-close {
