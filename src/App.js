@@ -21,9 +21,12 @@ class App extends Component {
   }
 
   checkSecretCode = value => {
-    this.setState({
-      isLoggedIn: value === process.env.REACT_APP_SECRET_CODE,
-    })
+    if (value === process.env.REACT_APP_SECRET_CODE) {
+      this.setState({
+        isLoggedIn: true,
+      })
+      window.gtag('event', 'login')
+    }
   }
 
   render() {
