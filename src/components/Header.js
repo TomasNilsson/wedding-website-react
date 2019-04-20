@@ -6,6 +6,8 @@ import Countdown from './Countdown'
 import Input from './Input'
 import './Header.css'
 
+const BACKGROUND_ANIMATION_DURATION = 5
+
 class Header extends Component {
   render() {
     const {
@@ -21,12 +23,14 @@ class Header extends Component {
     } = this.props
 
     const backgroundImages = window.innerWidth <= 768 ? imagesMobile : images
+    const totalAnimationDuration =
+      backgroundImages.length * BACKGROUND_ANIMATION_DURATION
 
     return (
       <div
         className="main-slider"
         style={
-          backgroundImages.length > 0
+          backgroundImages.length > 0 && !isLoggedIn
             ? { backgroundImage: `url(${backgroundImages[0]})` }
             : {}
         }
@@ -37,8 +41,9 @@ class Header extends Component {
               key={index}
               style={{
                 backgroundImage: `url(${imageUrl})`,
-                animationDuration: `${backgroundImages.length * 5}s`,
-                animationDelay: `${index * 5}s`,
+                animationDuration: `${totalAnimationDuration}s`,
+                animationDelay: `${index * BACKGROUND_ANIMATION_DURATION -
+                  totalAnimationDuration}s`,
               }}
             />
           ))}
