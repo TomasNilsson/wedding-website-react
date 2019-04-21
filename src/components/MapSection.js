@@ -6,8 +6,33 @@ import MapMarker from './MapMarker'
 import './MapSection.css'
 
 class MapSection extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      hoveredMarkerId: null,
+    }
+  }
+
+  onMarkerHoverEnter = key => {
+    this.setState({
+      hoveredMarkerId: key,
+    })
+  }
+
+  onMarkerHoverLeave = key => {
+    this.setState({
+      hoveredMarkerId: null,
+    })
+  }
+
+  onMarkerClick = (key, markerProps) => {
+    window.open(markerProps.link)
+  }
+
   render() {
     const { id, center, zoom, locations } = this.props
+    const { hoveredMarkerId } = this.state
     return (
       <section className="map-section" id={id}>
         <div className="map-section-wrapper">
@@ -17,7 +42,8 @@ class MapSection extends Component {
                 icon={location.icon}
                 title={location.title}
                 text={location.text}
-                key={location.title}
+                hovered={location.id === hoveredMarkerId}
+                key={location.id}
               />
             ))}
         </div>
@@ -30,6 +56,9 @@ class MapSection extends Component {
             }}
             defaultCenter={center}
             defaultZoom={zoom}
+            onChildMouseEnter={this.onMarkerHoverEnter}
+            onChildMouseLeave={this.onMarkerHoverLeave}
+            onChildClick={this.onMarkerClick}
           >
             {locations &&
               locations.map((location, i) => (
@@ -37,7 +66,8 @@ class MapSection extends Component {
                   lat={location.latitude}
                   lng={location.longitude}
                   icon={location.icon}
-                  key={location.title}
+                  link={location.link}
+                  key={location.id}
                 />
               ))}
           </GoogleMap>

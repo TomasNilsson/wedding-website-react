@@ -10,11 +10,20 @@
   font-weight: normal;
   font-size: 46px;
   margin: 0;
+  padding: 0 15px;
+  display: inline;
+  color: #000000;
+  border-bottom: 3px solid;
+  border-color: transparent;
 }
 
 .map-location-title i {
   margin-right: 15px;
   color: #890f3a;
+}
+
+.map-location-wrapper-hovered .map-location-title h2 {
+  border-color: #890f3a;
 }
 
 @media (min-width: 768px) {
