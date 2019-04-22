@@ -20,7 +20,7 @@ class Navbar extends Component {
     document.addEventListener('scroll', () => {
       const hasOverflowHidden =
         document.documentElement.style.getPropertyValue('overflow') === 'hidden' // true when modal is open
-      const isTop = window.scrollY < 100 && !hasOverflowHidden
+      const isTop = window.pageYOffset < 100 && !hasOverflowHidden
       if (isTop !== this.state.isTop) {
         this.setState({ isTop })
       }
