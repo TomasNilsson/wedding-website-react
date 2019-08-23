@@ -38,8 +38,20 @@ class FormsSection extends Component {
     }))
   }
 
+  openNewWindow = url => {
+    const width = 640
+    const height = 800
+    const left = (window.screen.width - width) / 2
+    const top = (window.screen.height - height) / 2
+    window.open(
+      url,
+      'newwindow',
+      `width=${width}, height=${height}, top=${top}, left=${left}, resizable=yes, scrollbars=yes`
+    )
+  }
+
   render() {
-    const { forms, id } = this.props
+    const { forms, id, newWindow } = this.props
     return (
       <section className="forms-section" id={id}>
         {forms &&
@@ -56,7 +68,11 @@ class FormsSection extends Component {
               )}
               <button
                 className="forms-section-button"
-                onClick={() => this.openModal(form.id)}
+                onClick={() =>
+                  newWindow
+                    ? this.openNewWindow(form.url)
+                    : this.openModal(form.id)
+                }
               >
                 {form.buttonText}
               </button>

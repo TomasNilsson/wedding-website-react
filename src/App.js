@@ -44,6 +44,7 @@ class App extends Component {
               'miscInfo',
               'wishlist',
               'rsvp',
+              'imageUpload',
             ].map(item => ({
               id: content[item].id,
               title: content[item].title,
@@ -90,11 +91,8 @@ class App extends Component {
               }
             />
             <Section {...content.wishlist} />
-            <FormsSection
-              title={content.rsvp.title}
-              forms={content.rsvp.forms}
-              id={content.rsvp.id}
-            />
+            <FormsSection {...content.rsvp} />
+            <FormsSection {...content.imageUpload} newWindow />
             <Section {...content.contact} />
             <Section {...content.footer} />
           </div>
