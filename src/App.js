@@ -29,6 +29,8 @@ class App extends Component {
     }
   }
 
+  isFuture = date => new Date(date) > new Date()
+
   render() {
     const { isLoggedIn } = this.state
 
@@ -45,10 +47,19 @@ class App extends Component {
               'wishlist',
               'rsvp',
               'imageUpload',
-            ].map(item => ({
-              id: content[item].id,
-              title: content[item].title,
-            }))}
+            ]
+              .filter(item => {
+                const startDate = content[item].startDate
+                const endDate = content[item].endDate
+                return !(
+                  (startDate && this.isFuture(startDate)) ||
+                  (endDate && !this.isFuture(endDate))
+                )
+              })
+              .map(item => ({
+                id: content[item].id,
+                title: content[item].title,
+              }))}
           />
         )}
         <Header
@@ -91,8 +102,12 @@ class App extends Component {
               }
             />
             <Section {...content.wishlist} />
-            <FormsSection {...content.rsvp} />
-            <FormsSection {...content.imageUpload} newWindow />
+            {this.isFuture(content.rsvp.endDate) && (
+              <FormsSection {...content.rsvp} />
+            )}
+            {!this.isFuture(content.imageUpload.startDate) && (
+              <FormsSection {...content.imageUpload} newWindow />
+            )}
             <Section {...content.contact} />
             <Section {...content.footer} />
           </div>

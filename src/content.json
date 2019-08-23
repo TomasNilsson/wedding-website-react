@@ -124,7 +124,8 @@
         "buttonText": "Open sign-up form",
         "url": "https://docs.google.com/forms/d/e/1FAIpQLSfhXgh2KI8hz0dqCJlRqPib3kot-gEtBD9-xnySjaNRDncm5Q/viewform?embedded=true"
       }
-    ]
+    ],
+    "endDate": "2030-10-05T14:00:00+02:00"
   },
   "imageUpload": {
     "id": "imageUpload",
@@ -137,7 +138,8 @@
         "buttonText": "Upload images",
         "url": "https://www.dropbox.com/request/yourId"
       }
-    ]
+    ],
+    "startDate": "2030-10-05T14:00:00+02:00"
   },
   "contact": {
     "id": "contact",
