@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Change the content of the file [src/content.json](src/content.json) to change text, images and other information on the wedding website.
 
+[Markdown](https://guides.github.com/features/mastering-markdown/) syntax is supported for styling of the text (a [Markdown editor](https://codesandbox.io/embed/markdown-live-preview-reactmarkdown-9v5ek?fontsize=14&hidenavigation=1&theme=dark&view=preview) can be used to simplify editing).
+
+## Environment variables
+
 Create a file called `.env` in the root of the project and put the following environment variables there:
 
 ```
