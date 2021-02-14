@@ -20,7 +20,7 @@ class App extends Component {
     }
   }
 
-  checkSecretCode = value => {
+  checkSecretCode = (value) => {
     if (value === process.env.REACT_APP_SECRET_CODE) {
       this.setState({
         isLoggedIn: true,
@@ -29,7 +29,7 @@ class App extends Component {
     }
   }
 
-  isFuture = date => new Date(date) > new Date()
+  isFuture = (date) => new Date(date) > new Date()
 
   render() {
     const { isLoggedIn } = this.state
@@ -48,7 +48,7 @@ class App extends Component {
               'rsvp',
               'imageUpload',
             ]
-              .filter(item => {
+              .filter((item) => {
                 const startDate = content[item].startDate
                 const endDate = content[item].endDate
                 return !(
@@ -56,7 +56,7 @@ class App extends Component {
                   (endDate && !this.isFuture(endDate))
                 )
               })
-              .map(item => ({
+              .map((item) => ({
                 id: content[item].id,
                 title: content[item].title,
               }))}

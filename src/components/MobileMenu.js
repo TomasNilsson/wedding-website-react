@@ -2,31 +2,13 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class MobileMenu extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      open: this.props.open ? this.props.open : false,
-    }
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.open !== this.state.open) {
-      this.setState({ open: nextProps.open })
-    }
-  }
-
-  handleClick() {
-    this.setState({ open: !this.state.open })
-  }
-
   render() {
     const styles = {
       container: {
         position: 'fixed',
         top: 0,
         left: 0,
-        height: this.state.open ? '100%' : 0,
+        height: this.props.open ? '100%' : 0,
         width: '100vw',
         display: 'flex',
         flexDirection: 'column',
@@ -41,7 +23,7 @@ class MobileMenu extends Component {
     }
     return (
       <div style={styles.container}>
-        {this.state.open ? (
+        {this.props.open ? (
           <div style={styles.menuList}>{this.props.children}</div>
         ) : null}
       </div>

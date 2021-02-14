@@ -12,7 +12,7 @@ class Input extends Component {
     }
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     const value = event.target.value
     this.setState({ value })
     this.props.onChange(value)

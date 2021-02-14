@@ -80,7 +80,7 @@ class Navbar extends Component {
           </div>
           <div className="nav-content d-none d-lg-flex">
             <ul className="nav-items">
-              {this.props.items.map(item => (
+              {this.props.items.map((item) => (
                 <li className="nav-item" key={item.id}>
                   <Link
                     activeClass="active"

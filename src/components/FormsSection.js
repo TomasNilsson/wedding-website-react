@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactMarkdown from 'react-markdown'
-import Modal from 'react-responsive-modal'
+import { Modal } from 'react-responsive-modal'
+import 'react-responsive-modal/styles.css'
 import './FormsSection.css'
 
 class FormsSection extends Component {
@@ -9,15 +10,15 @@ class FormsSection extends Component {
 
     this.state = {
       forms: Object.assign(
-        ...props.forms.map(form => ({
+        ...props.forms.map((form) => ({
           [form.id]: { open: false },
         }))
       ),
     }
   }
 
-  openModal = id => {
-    this.setState(state => ({
+  openModal = (id) => {
+    this.setState((state) => ({
       forms: {
         ...state.forms,
         [id]: {
@@ -27,8 +28,8 @@ class FormsSection extends Component {
     }))
   }
 
-  closeModal = id => {
-    this.setState(state => ({
+  closeModal = (id) => {
+    this.setState((state) => ({
       forms: {
         ...state.forms,
         [id]: {
@@ -38,7 +39,7 @@ class FormsSection extends Component {
     }))
   }
 
-  openNewWindow = url => {
+  openNewWindow = (url) => {
     const width = 640
     const height = 800
     const left = (window.screen.width - width) / 2
@@ -55,16 +56,18 @@ class FormsSection extends Component {
     return (
       <section className="forms-section" id={id}>
         {forms &&
-          forms.map(form => (
+          forms.map((form) => (
             <div className="forms-section-wrapper" key={form.id}>
               <div className="forms-section-heading">
                 <h2>{form.title}</h2>
               </div>
               {form.text && (
                 <ReactMarkdown
-                  source={form.text}
                   className="forms-section-text"
-                />
+                  linkTarget="_blank"
+                >
+                  {form.text}
+                </ReactMarkdown>
               )}
               <button
                 className="forms-section-button"
@@ -82,23 +85,21 @@ class FormsSection extends Component {
                 center
                 classNames={{
                   modal: 'forms-section-modal',
-                  overlay: 'forms-section-modal-overlay',
                   closeButton: 'forms-section-modal-close',
                 }}
+                focusTrapped={false}
               >
-                <div className="forms-section-modal-iframe-container">
-                  <iframe
-                    className="forms-section-modal-iframe"
-                    title={form.title}
-                    src={form.url}
-                    width="640"
-                    frameBorder="0"
-                    marginHeight="0"
-                    marginWidth="0"
-                  >
-                    Loading...
-                  </iframe>
-                </div>
+                <iframe
+                  className="forms-section-modal-iframe"
+                  title={form.title}
+                  src={form.url}
+                  width="640"
+                  frameBorder="0"
+                  marginHeight="0"
+                  marginWidth="0"
+                >
+                  Loading...
+                </iframe>
               </Modal>
             </div>
           ))}

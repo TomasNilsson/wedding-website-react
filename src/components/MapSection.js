@@ -14,13 +14,13 @@ class MapSection extends Component {
     }
   }
 
-  onMarkerHoverEnter = key => {
+  onMarkerHoverEnter = (key) => {
     this.setState({
       hoveredMarkerId: key,
     })
   }
 
-  onMarkerHoverLeave = key => {
+  onMarkerHoverLeave = (key) => {
     this.setState({
       hoveredMarkerId: null,
     })
@@ -37,7 +37,7 @@ class MapSection extends Component {
       <section className="map-section" id={id}>
         <div className="map-section-wrapper">
           {locations &&
-            locations.map(location => (
+            locations.map((location) => (
               <MapLocation
                 icon={location.icon}
                 title={location.title}

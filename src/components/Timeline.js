@@ -7,7 +7,7 @@ const Timeline = ({ items }) => (
     <div className="timeline-column d-none d-lg-block">
       {items &&
         items
-          .filter(item => item.side === 'left')
+          .filter((item) => item.side === 'left')
           .map((item, i) => (
             <TimelineItem
               key={item.date}
@@ -21,7 +21,7 @@ const Timeline = ({ items }) => (
       <div className="timeline-spacing" />
       {items &&
         items
-          .filter(item => item.side === 'right')
+          .filter((item) => item.side === 'right')
           .map((item, i) => (
             <TimelineItem
               key={item.date}

@@ -42,8 +42,9 @@ class Header extends Component {
               style={{
                 backgroundImage: `url(${imageUrl})`,
                 animationDuration: `${totalAnimationDuration}s`,
-                animationDelay: `${index * BACKGROUND_ANIMATION_DURATION -
-                  totalAnimationDuration}s`,
+                animationDelay: `${
+                  index * BACKGROUND_ANIMATION_DURATION - totalAnimationDuration
+                }s`,
               }}
             />
           ))}

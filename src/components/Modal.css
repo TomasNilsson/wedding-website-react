@@ -23,15 +23,12 @@
 
 .modal-component {
   padding: 0 0 1.2rem;
+  margin: 0;
   width: 100%;
   min-height: 100%;
   box-sizing: border-box;
   text-align: center;
   font-family: 'Raleway', sans-serif;
-}
-
-.modal-overlay {
-  padding: 0;
 }
 
 .modal-close {

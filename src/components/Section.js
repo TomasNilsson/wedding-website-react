@@ -9,11 +9,9 @@ const Section = ({ title, text, id, childComponent }) => (
         {title && <h2>{title}</h2>}
       </div>
       {text && (
-        <ReactMarkdown
-          source={text}
-          className="section-text"
-          linkTarget="_blank"
-        />
+        <ReactMarkdown className="section-text" linkTarget="_blank">
+          {text}
+        </ReactMarkdown>
       )}
     </div>
     {childComponent}

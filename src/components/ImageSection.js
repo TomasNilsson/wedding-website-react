@@ -9,11 +9,9 @@ const ImageSection = ({ title, text, image, id, childComponent }) => (
         <h2>{title}</h2>
       </div>
       {text && (
-        <ReactMarkdown
-          source={text}
-          className="image-section-text"
-          linkTarget="_blank"
-        />
+        <ReactMarkdown className="image-section-text" linkTarget="_blank">
+          {text}
+        </ReactMarkdown>
       )}
     </div>
     <div className="image-section-child-wrapper">{childComponent}</div>

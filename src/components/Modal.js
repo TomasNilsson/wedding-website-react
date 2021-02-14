@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import ModalComponent from 'react-responsive-modal'
+import { Modal as ModalComponent } from 'react-responsive-modal'
 import Section from './Section'
+import 'react-responsive-modal/styles.css'
 import './Modal.css'
 
 class Modal extends Component {
@@ -36,9 +37,9 @@ class Modal extends Component {
           center
           classNames={{
             modal: 'modal-component',
-            overlay: 'modal-overlay',
             closeButton: 'modal-close',
           }}
+          focusTrapped={false}
         >
           <Section title={title} text={text} id={'modal'} />
         </ModalComponent>

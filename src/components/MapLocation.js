@@ -15,11 +15,9 @@ const MapLocation = ({ icon, title, text, hovered }) => (
       </h2>
     </div>
     {text && (
-      <ReactMarkdown
-        source={text}
-        className="map-location-text"
-        linkTarget="_blank"
-      />
+      <ReactMarkdown className="map-location-text" linkTarget="_blank">
+        {text}
+      </ReactMarkdown>
     )}
   </div>
 )
