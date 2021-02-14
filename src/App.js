@@ -16,7 +16,7 @@ class App extends Component {
     super(props)
 
     this.state = {
-      isLoggedIn: false,
+      isLoggedIn: !process.env.REACT_APP_SECRET_CODE,
     }
   }
 
