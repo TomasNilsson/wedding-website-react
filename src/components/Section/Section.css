@@ -28,7 +28,7 @@
 .section-heading:after,
 .section-separator:after {
   content: '';
-  background: url('../images/separator.png') no-repeat center center;
+  background: url('../../images/separator.png') no-repeat center center;
   height: 50px;
   display: block;
 }

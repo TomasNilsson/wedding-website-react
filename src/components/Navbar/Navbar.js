@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link, scroller } from 'react-scroll'
-import MobileMenu from './MobileMenu'
-import MobileMenuButton from './MobileMenuButton'
-import MobileMenuItem from './MobileMenuItem'
+import MobileMenu from '../MobileMenu'
+import MobileMenuButton from '../MobileMenuButton'
+import MobileMenuItem from '../MobileMenuItem'
 import './Navbar.css'
 
 class Navbar extends Component {

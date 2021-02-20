@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import GoogleMap from 'google-map-react'
-import MapLocation from './MapLocation'
-import MapMarker from './MapMarker'
+import MapLocation from '../MapLocation'
+import MapMarker from '../MapMarker'
 import './MapSection.css'
 
 class MapSection extends Component {

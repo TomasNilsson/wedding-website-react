@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Link } from 'react-scroll'
-import Countdown from './Countdown'
-import Input from './Input'
+import Countdown from '../Countdown'
+import Input from '../Input'
 import './Header.css'
 
 const BACKGROUND_ANIMATION_DURATION = 5

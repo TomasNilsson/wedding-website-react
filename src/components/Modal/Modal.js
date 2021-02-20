@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Modal as ModalComponent } from 'react-responsive-modal'
-import Section from './Section'
+import Section from '../Section'
 import 'react-responsive-modal/styles.css'
 import './Modal.css'
 
