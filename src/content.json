@@ -63,6 +63,7 @@
       "lat": 55.76578,
       "lng": 13.26489
     },
+    "zoom": 11,
     "locations": [
       {
         "id": "wedding",
@@ -91,7 +92,8 @@
         "longitude": "13.187646",
         "link": "https://goo.gl/maps/zhi6htp3BiHAAWok6"
       }
-    ]
+    ],
+    "showLocationTextSection": true
   },
   "miscInfo": {
     "id": "miscInfo",

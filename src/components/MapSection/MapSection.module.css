@@ -1,12 +1,12 @@
-.map-section {
+.section {
   min-height: 450px;
   display: flex;
-  box-shadow: 1px 10px 40px rgba(0, 0, 0, 0.4);
   flex-wrap: wrap;
   margin-top: 30px;
+  justify-content: center;
 }
 
-.map-section-wrapper {
+.subsectionWrapper {
   min-height: 450px;
   display: flex;
   flex: 0 0 100%;
@@ -14,20 +14,21 @@
   flex-wrap: wrap;
   justify-content: center;
   box-sizing: border-box;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 992px) {
-  .map-section-wrapper {
+  .subsectionWrapper {
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 
-.map-section a {
-  color: #890f3a;
+.section a {
+  color: var(--primary-color);
   text-decoration: none;
 }
 
-.map-section a:hover {
+.section a:hover {
   text-decoration: underline;
 }

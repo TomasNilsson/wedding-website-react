@@ -83,12 +83,7 @@ class App extends Component {
               }
             />
             <Section {...content.info} />
-            <MapSection
-              center={content.map.center}
-              zoom={11}
-              locations={content.map.locations}
-              id={content.map.id}
-            />
+            <MapSection {...content.map} />
             <Section
               title={content.miscInfo.title}
               text={content.miscInfo.text}

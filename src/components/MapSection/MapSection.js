@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import GoogleMap from 'google-map-react'
 import MapLocation from '../MapLocation'
 import MapMarker from '../MapMarker'
-import './MapSection.css'
+import styles from './MapSection.module.css'
 
 class MapSection extends Component {
   constructor(props) {
@@ -31,23 +31,31 @@ class MapSection extends Component {
   }
 
   render() {
-    const { id, center, zoom, locations } = this.props
+    const {
+      id,
+      center,
+      zoom,
+      locations,
+      showLocationTextSection = true,
+    } = this.props
     const { hoveredMarkerId } = this.state
     return (
-      <section className="map-section" id={id}>
-        <div className="map-section-wrapper">
-          {locations &&
-            locations.map((location) => (
-              <MapLocation
-                icon={location.icon}
-                title={location.title}
-                text={location.text}
-                hovered={location.id === hoveredMarkerId}
-                key={location.id}
-              />
-            ))}
-        </div>
-        <div className="map-section-wrapper">
+      <section className={styles.section} id={id}>
+        {showLocationTextSection && (
+          <div className={styles.subsectionWrapper}>
+            {locations &&
+              locations.map((location) => (
+                <MapLocation
+                  icon={location.icon}
+                  title={location.title}
+                  text={location.text}
+                  hovered={location.id === hoveredMarkerId}
+                  key={location.id}
+                />
+              ))}
+          </div>
+        )}
+        <div className={styles.subsectionWrapper}>
           <GoogleMap
             bootstrapURLKeys={{
               key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -66,8 +74,10 @@ class MapSection extends Component {
                   lat={location.latitude}
                   lng={location.longitude}
                   icon={location.icon}
+                  title={location.title}
                   link={location.link}
                   key={location.id}
+                  showTooltip={!showLocationTextSection}
                 />
               ))}
           </GoogleMap>
