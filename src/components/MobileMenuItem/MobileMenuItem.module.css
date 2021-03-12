@@ -1,0 +1,53 @@
+.container {
+  opacity: 0;
+  animation: appear 1s forwards;
+}
+
+.menuItem {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  margin: 0 5%;
+  cursor: pointer;
+  color: #fafafa;
+  transition: color 0.2s ease-in-out;
+  animation: slideIn 0.5s forwards;
+}
+
+.menuItem:hover {
+  color: gray;
+}
+
+.line {
+  width: 90%;
+  height: 1px;
+  background: gray;
+  margin: 0 auto;
+  animation: shrink 0.5s forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 90%;
+  }
+}

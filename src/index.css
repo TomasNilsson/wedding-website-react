@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #890f3a;
+  --secondary-color: #000000;
+  --button-bg-color: var(--primary-color);
+  --button-text-color: #ffffff;
+  --button-border-color: transparent;
+  --button-hover-bg-color: #440018;
+  --button-hover-text-color: var(--button-text-color);
+  --button-hover-border-color: var(--button-bg-color);
+}
+
 body {
   margin: 0;
   padding: 0;

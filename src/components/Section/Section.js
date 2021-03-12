@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import './Section.css'
+import styles from './Section.module.css'
 
 const Section = ({ title, text, id, childComponent }) => (
-  <section className="section" id={id}>
-    <div className="section-text-wrapper">
-      <div className={title ? 'section-heading' : 'section-separator'}>
-        {title && <h2>{title}</h2>}
+  <section className={styles.section} id={id}>
+    <div className={styles.sectionTextWrapper}>
+      <div className={title ? styles.sectionHeading : styles.sectionSeparator}>
+        {!!title && <h2>{title}</h2>}
       </div>
-      {text && (
-        <ReactMarkdown className="section-text" linkTarget="_blank">
+      {!!text && (
+        <ReactMarkdown className={styles.sectionText} linkTarget="_blank">
           {text}
         </ReactMarkdown>
       )}

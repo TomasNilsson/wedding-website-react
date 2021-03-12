@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Modal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css'
-import './FormsSection.css'
+import styles from './FormsSection.module.css'
 
 class FormsSection extends Component {
   constructor(props) {
@@ -54,23 +54,23 @@ class FormsSection extends Component {
   render() {
     const { forms, id, newWindow } = this.props
     return (
-      <section className="forms-section" id={id}>
+      <section className={styles.section} id={id}>
         {forms &&
           forms.map((form) => (
-            <div className="forms-section-wrapper" key={form.id}>
-              <div className="forms-section-heading">
+            <div className={styles.subsectionWrapper} key={form.id}>
+              <div className={styles.subsectionHeading}>
                 <h2>{form.title}</h2>
               </div>
-              {form.text && (
+              {!!form.text && (
                 <ReactMarkdown
-                  className="forms-section-text"
+                  className={styles.subsectionText}
                   linkTarget="_blank"
                 >
                   {form.text}
                 </ReactMarkdown>
               )}
               <button
-                className="forms-section-button"
+                className={styles.openFormButton}
                 onClick={() =>
                   newWindow
                     ? this.openNewWindow(form.url)
@@ -84,13 +84,13 @@ class FormsSection extends Component {
                 onClose={() => this.closeModal(form.id)}
                 center
                 classNames={{
-                  modal: 'forms-section-modal',
-                  closeButton: 'forms-section-modal-close',
+                  modal: styles.formModal,
+                  closeButton: styles.formModalCloseButton,
                 }}
                 focusTrapped={false}
               >
                 <iframe
-                  className="forms-section-modal-iframe"
+                  className={styles.formModalIframe}
                   title={form.title}
                   src={form.url}
                   width="640"

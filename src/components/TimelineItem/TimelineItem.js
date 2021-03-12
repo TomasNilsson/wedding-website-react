@@ -1,22 +1,20 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import './TimelineItem.css'
+import classNames from 'classnames'
+import styles from './TimelineItem.module.css'
 
 const TimelineItem = ({ date, text, image, rightSide }) => (
-  <div className="timeline-item">
+  <div className={styles.container}>
     <div
-      className={`${
-        rightSide ? 'timeline-right-side' : 'timeline-left-side'
-      } date-circle`}
-    >
-      <div className="timeline-arrow" />
-      <h4 className="timeline-title">{date}</h4>
-      {text && (
-        <ReactMarkdown className="timeline-text" linkTarget="_blank">
-          {text}
-        </ReactMarkdown>
+      className={classNames(
+        rightSide ? styles.rightSide : styles.leftSide,
+        styles.dateCircle
       )}
-      {image && <img src={image} alt={date} className="timeline-image" />}
+    >
+      <div className={styles.arrow} />
+      <h4 className={styles.title}>{date}</h4>
+      {!!text && <ReactMarkdown linkTarget="_blank">{text}</ReactMarkdown>}
+      {!!image && <img src={image} alt={date} className={styles.image} />}
     </div>
   </div>
 )

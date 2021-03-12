@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link, scroller } from 'react-scroll'
+import classNames from 'classnames'
 import MobileMenu from '../MobileMenu'
 import MobileMenuButton from '../MobileMenuButton'
 import MobileMenuItem from '../MobileMenuItem'
-import './Navbar.css'
+import styles from './Navbar.module.css'
 
 class Navbar extends Component {
   constructor(props) {
@@ -58,11 +59,10 @@ class Navbar extends Component {
     return (
       <header>
         <nav
-          className={`nav${
-            this.state.isTop || this.state.mobileMenuOpen
-              ? ' nav-transparent'
-              : ''
-          }`}
+          className={classNames(styles.nav, {
+            [styles.navTransparent]:
+              this.state.isTop || this.state.mobileMenuOpen,
+          })}
           id="navbar"
         >
           <MobileMenuButton
@@ -73,17 +73,17 @@ class Navbar extends Component {
                 ? '#ffffff'
                 : '#000000'
             }
-            className="nav-mobile-menu-button d-lg-none"
+            className={`${styles.mobileMenuButton} d-lg-none`}
           />
-          <div className="nav-icon d-lg-none">
+          <div className={`${styles.navIcon} d-lg-none`}>
             <i className="icon icon-hearts" />
           </div>
-          <div className="nav-content d-none d-lg-flex">
-            <ul className="nav-items">
+          <div className={`${styles.navContent} d-none d-lg-flex`}>
+            <ul className={styles.navItems}>
               {this.props.items.map((item) => (
-                <li className="nav-item" key={item.id}>
+                <li className={styles.navItem} key={item.id}>
                   <Link
-                    activeClass="active"
+                    activeClass={styles.active}
                     to={item.id}
                     spy={true}
                     smooth={true}

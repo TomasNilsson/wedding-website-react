@@ -1,27 +1,24 @@
-.modal-button {
-  color: #fff;
+.openModalButton {
+  color: var(--button-text-color);
   font-size: 16px;
   font-family: 'Raleway', sans-serif;
-  background: #890f3a;
+  background: var(--button-bg-color);
   padding: 16px;
   border-radius: 5px;
   display: inline-block;
-  border: none;
+  border: 2px solid var(--button-border-color);
   outline: 0;
   cursor: pointer;
   transition: all 0.4s ease 0s;
 }
 
-.modal-button:hover {
-  background: #440018;
-  letter-spacing: 1px;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
-  transition: all 0.4s ease 0s;
+.openModalButton:hover {
+  background: var(--button-hover-bg-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
 }
 
-.modal-component {
+.modal {
   padding: 0 0 1.2rem;
   margin: 0;
   width: 100%;
@@ -31,20 +28,16 @@
   font-family: 'Raleway', sans-serif;
 }
 
-.modal-close {
+.closeButton {
   cursor: pointer;
   outline: 0;
 }
 
 @media (min-width: 768px) {
-  .modal-component {
+  .modal {
     border-radius: 5px;
     width: auto;
     max-width: 800px;
     min-height: 0;
-  }
-
-  .modal-overlay {
-    padding: 1.2rem;
   }
 }

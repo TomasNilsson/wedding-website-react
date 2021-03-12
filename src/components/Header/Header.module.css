@@ -1,4 +1,4 @@
-.main-slider {
+.imageSlider {
   height: 100vh;
   position: relative;
   z-index: 1;
@@ -11,7 +11,7 @@
   justify-content: center;
 }
 
-.main-slider:after {
+.imageSlider:after {
   content: '';
   position: absolute;
   top: 0;
@@ -22,7 +22,7 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
-.main-slider > figure {
+.imageSlider > figure {
   animation-name: imageAnimation;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -61,48 +61,44 @@
   }
 }
 
-.slider-content {
+.sliderContent {
   padding: 0 20px;
 }
 
-.slider-content .pre-title {
+.sliderContent .preTitle {
   font-family: 'Great Vibes', cursive;
   font-weight: normal;
   font-size: 40px;
   margin: 15px 0;
 }
 
-.slider-content i {
+.sliderContent i {
   line-height: 1;
 }
 
-.slider-content i.small-icon {
-  font-size: 2.5em;
-}
-
-.slider-content .title {
+.sliderContent .title {
   font-family: 'Great Vibes', cursive;
   font-weight: normal;
   font-size: 62px;
   margin: 15px 0;
 }
 
-.slider-content .title i {
+.sliderContent .title i {
   transform: translateY(10px);
   font-size: 0.8em;
-  color: #890f3a;
+  color: var(--primary-color);
 }
 
-.slider-content .date {
+.sliderContent .date {
   font-size: 20px;
   margin: 15px 0;
 }
 
-.count-down {
+.countdown {
   margin-top: 35px;
 }
 
-.slider-scroll i {
+.scrollDownButton i {
   margin-top: 35px;
   color: #fff;
   position: relative;
@@ -112,7 +108,7 @@
   cursor: pointer;
 }
 
-.fade-down {
+.fadeDown {
   animation-name: fade-down;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
@@ -134,38 +130,38 @@
   }
 }
 
-.fade-enter {
+.fadeEnter {
   opacity: 0.01;
   transform: scale(1.1);
 }
 
-.fade-enter-active {
+.fadeEnterActive {
   opacity: 1;
   transform: scale(1);
   transition: all 700ms;
 }
 
-.fade-exit {
+.fadeExit {
   opacity: 1;
   transform: scale(1);
 }
 
-.fade-exit-active {
+.fadeExitActive {
   opacity: 0.01;
   transform: scale(1.1);
   transition: all 700ms;
 }
 
 @media (min-width: 992px) {
-  .slider-content .pre-title {
-    font-size: 50px;
+  .sliderContent .preTitle {
+    font-size: 60px;
   }
 
-  .slider-content .title {
-    font-size: 85px;
+  .sliderContent .title {
+    font-size: 90px;
   }
 
-  .slider-content .date {
+  .sliderContent .date {
     font-size: 25px;
   }
 }

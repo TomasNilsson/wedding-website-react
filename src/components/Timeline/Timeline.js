@@ -1,40 +1,13 @@
 import React from 'react'
 import TimelineItem from '../TimelineItem'
-import './Timeline.css'
+import styles from './Timeline.module.css'
 
-const Timeline = ({ items }) => (
-  <div className="timeline">
-    <div className="timeline-column d-none d-lg-block">
-      {items &&
-        items
-          .filter((item) => item.side === 'left')
-          .map((item, i) => (
-            <TimelineItem
-              key={item.date}
-              date={item.date}
-              text={item.text}
-              image={item.image}
-            />
-          ))}
-    </div>
-    <div className="timeline-column d-none d-lg-block">
-      <div className="timeline-spacing" />
-      {items &&
-        items
-          .filter((item) => item.side === 'right')
-          .map((item, i) => (
-            <TimelineItem
-              key={item.date}
-              date={item.date}
-              text={item.text}
-              image={item.image}
-              rightSide
-            />
-          ))}
-    </div>
-    <div className="timeline-column d-lg-none">
-      {items &&
-        items.map((item, i) => (
+const Timeline = ({ items = [] }) => (
+  <div className={styles.timeline}>
+    <div className={`${styles.column} d-none d-lg-block`}>
+      {items
+        .filter((item) => item.side === 'left')
+        .map((item) => (
           <TimelineItem
             key={item.date}
             date={item.date}
@@ -42,6 +15,30 @@ const Timeline = ({ items }) => (
             image={item.image}
           />
         ))}
+    </div>
+    <div className={`${styles.column} d-none d-lg-block`}>
+      <div className={styles.spacing} />
+      {items
+        .filter((item) => item.side === 'right')
+        .map((item) => (
+          <TimelineItem
+            key={item.date}
+            date={item.date}
+            text={item.text}
+            image={item.image}
+            rightSide
+          />
+        ))}
+    </div>
+    <div className={`${styles.column} d-lg-none`}>
+      {items.map((item) => (
+        <TimelineItem
+          key={item.date}
+          date={item.date}
+          text={item.text}
+          image={item.image}
+        />
+      ))}
     </div>
   </div>
 )

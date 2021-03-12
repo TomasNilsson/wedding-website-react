@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import './Input.css'
+import classNames from 'classnames'
+import styles from './Input.module.css'
 
 class Input extends Component {
   constructor(props) {
@@ -21,10 +22,13 @@ class Input extends Component {
   render() {
     const { active, value } = this.state
     const { label, type } = this.props
-    const fieldClassName = `field ${(active || value) && 'active'}`
 
     return (
-      <div className={fieldClassName}>
+      <div
+        className={classNames(styles.field, {
+          [styles.active]: active || value,
+        })}
+      >
         <input
           type={type}
           value={value}

@@ -1,11 +1,11 @@
-.map-location-wrapper {
+.wrapper {
   flex: 0 0 100%;
   padding: 20px;
   box-sizing: border-box;
   font-size: 16px;
 }
 
-.map-location-title h2 {
+.locationTitle h2 {
   font-family: 'Great Vibes', cursive;
   font-weight: normal;
   font-size: 46px;
@@ -17,23 +17,23 @@
   border-color: transparent;
 }
 
-.map-location-title i {
-  margin-right: 15px;
-  color: #890f3a;
+.locationTitle.hovered h2 {
+  border-color: var(--primary-color);
 }
 
-.map-location-wrapper-hovered .map-location-title h2 {
-  border-color: #890f3a;
+.locationTitle i {
+  margin-right: 15px;
+  color: var(--primary-color);
 }
 
 @media (min-width: 768px) {
-  .map-location-wrapper {
+  .wrapper {
     flex: 0 0 50%;
     padding: 30px 20px;
     box-sizing: border-box;
   }
 
-  .map-location-title h2 {
+  .locationTitle h2 {
     font-size: 56px;
   }
 }

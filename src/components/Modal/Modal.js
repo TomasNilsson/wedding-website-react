@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Modal as ModalComponent } from 'react-responsive-modal'
 import Section from '../Section'
 import 'react-responsive-modal/styles.css'
-import './Modal.css'
+import styles from './Modal.module.css'
 
 class Modal extends Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class Modal extends Component {
     return (
       <div>
         <p>
-          <button className="modal-button" onClick={this.openModal}>
+          <button className={styles.openModalButton} onClick={this.openModal}>
             {buttonText}
           </button>
         </p>
@@ -36,8 +36,8 @@ class Modal extends Component {
           onClose={this.closeModal}
           center
           classNames={{
-            modal: 'modal-component',
-            closeButton: 'modal-close',
+            modal: styles.modal,
+            closeButton: styles.closeButton,
           }}
           focusTrapped={false}
         >

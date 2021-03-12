@@ -6,19 +6,19 @@
   height: var(--marker-size);
   left: calc(-1 * var(--marker-size) / 2);
   top: calc(-1 * var(--marker-size) / 2);
-  border: 5px solid #000000;
+  border: 5px solid var(--secondary-color);
   border-radius: var(--marker-size);
   background-color: #ffffff;
   text-align: center;
-  color: #890f3a;
+  color: var(--primary-color);
   font-size: 35px;
   padding: 4px;
   cursor: pointer;
 }
 
 .markerHover {
-  border: 5px solid #890f3a;
-  color: #000000;
+  border: 5px solid var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .tooltip {

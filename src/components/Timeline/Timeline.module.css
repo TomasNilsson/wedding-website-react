@@ -21,12 +21,12 @@
   background: #ccc;
 }
 
-.timeline-column {
+.column {
   max-width: 100%;
   box-sizing: border-box;
 }
 
-.timeline-spacing {
+.spacing {
   padding-bottom: 65px;
 }
 
@@ -35,7 +35,7 @@
     right: 50%;
   }
 
-  .timeline-column {
+  .column {
     flex: 0 0 50%;
     max-width: 50%;
   }

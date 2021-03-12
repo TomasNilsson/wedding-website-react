@@ -1,20 +1,20 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import './ImageSection.css'
+import styles from './ImageSection.module.css'
 
-const ImageSection = ({ title, text, image, id, childComponent }) => (
-  <section className="image-section" id={id}>
-    <div className="image-section-text-wrapper">
-      <div className="image-section-heading">
+const ImageSection = ({ title, text, id, childComponent }) => (
+  <section className={styles.section} id={id}>
+    <div className={styles.sectionTextWrapper}>
+      <div className={styles.sectionHeading}>
         <h2>{title}</h2>
       </div>
-      {text && (
-        <ReactMarkdown className="image-section-text" linkTarget="_blank">
+      {!!text && (
+        <ReactMarkdown className={styles.sectionText} linkTarget="_blank">
           {text}
         </ReactMarkdown>
       )}
     </div>
-    <div className="image-section-child-wrapper">{childComponent}</div>
+    {childComponent}
   </section>
 )
 

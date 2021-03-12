@@ -3,58 +3,58 @@
   box-sizing: border-box;
 }
 
-.section-text-wrapper {
+.sectionTextWrapper {
   width: 100%;
   max-width: 740px;
   margin: 0 auto;
 }
 
-.section-heading {
+.sectionHeading {
   padding-top: 30px;
   padding-bottom: 15px;
 }
 
-.section-heading h2 {
+.sectionHeading h2 {
   font-family: 'Great Vibes', cursive;
   font-weight: normal;
   font-size: 56px;
   margin: 0;
 }
 
-.section-separator {
+.sectionSeparator {
   padding-bottom: 15px;
 }
 
-.section-heading:after,
-.section-separator:after {
+.sectionHeading:after,
+.sectionSeparator:after {
   content: '';
   background: url('../../images/separator.png') no-repeat center center;
-  height: 50px;
+  height: 65px;
   display: block;
 }
 
-.section-text {
+.sectionText {
   line-height: 1.5em;
   font-size: 16px;
 }
 
-.section-text ul {
+.sectionText ul {
   display: inline-block;
   text-align: left;
   margin: 0;
 }
 
-.section-text h2 {
+.sectionText h2 {
   margin-top: 30px;
   margin-bottom: 15px;
   font-size: 24px;
 }
 
-.section-text a {
-  color: #890f3a;
+.sectionText a {
+  color: var(--primary-color);
   text-decoration: none;
 }
 
-.section-text a:hover {
+.sectionText a:hover {
   text-decoration: underline;
 }

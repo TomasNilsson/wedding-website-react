@@ -1,0 +1,46 @@
+.container {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.line {
+  height: 2px;
+  width: 20px;
+  transition: all 0.2s ease;
+}
+
+.lineTop {
+  transform: none;
+  margin-bottom: 5px;
+}
+
+.lineTop.open {
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+
+.lineMiddle {
+  opacity: 1;
+  transform: none;
+}
+
+.lineMiddle.open {
+  opacity: 0;
+  transform: translateX(-16px);
+}
+
+.lineBottom {
+  transform: none;
+  margin-top: 5px;
+}
+
+.lineBottom.open {
+  transform: translateX(-1px) rotate(-45deg);
+  transform-origin: top left;
+}

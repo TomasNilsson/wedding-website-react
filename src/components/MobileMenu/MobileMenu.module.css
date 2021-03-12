@@ -1,0 +1,21 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+  color: #fafafa;
+  transition: height 0.3s ease;
+  z-index: 100;
+}
+
+.open {
+  height: 100%;
+}
+
+.menuList {
+  padding-top: 3rem;
+}

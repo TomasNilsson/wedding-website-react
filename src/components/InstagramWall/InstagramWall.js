@@ -1,12 +1,12 @@
 import React from 'react'
-import './InstagramWall.css'
+import styles from './InstagramWall.module.css'
 
 const InstagramWall = ({ wallUrl }) => (
-  <div className="instagram-wall-wrapper">
+  <div className={styles.wrapper}>
     <iframe
       src={wallUrl}
       title="Instagram"
-      className="instagram-wall-iframe"
+      className={styles.instagramWallIframe}
       scrolling="no"
     />
   </div>

@@ -1,32 +1,32 @@
-.timeline-item {
+.container {
   padding-bottom: 20px;
   position: relative;
   font-size: 16px;
 }
 
-.timeline-image {
+.image {
   max-width: 100%;
   max-height: 400px;
   border-radius: 10px;
 }
 
-.timeline-title {
+.title {
   font-size: 25px;
   font-weight: 300;
   margin: 10px 0;
 }
 
-.timeline-arrow {
+.arrow {
   display: none;
 }
 
-.timeline-left-side {
+.leftSide {
   padding-right: 10px;
   text-align: right;
 }
 
-.date-circle:after {
-  background: none repeat scroll 0 0 #890f3a;
+.dateCircle:after {
+  background: none repeat scroll 0 0 var(--primary-color);
   border: 3px solid #ececec;
   border-radius: 50%;
   content: '';
@@ -37,89 +37,89 @@
   z-index: 20;
 }
 
-.timeline-left-side.date-circle:after {
+.leftSide.dateCircle:after {
   right: -20.5px;
 }
 
 @media (min-width: 992px) {
-  .timeline-image {
+  .image {
     max-width: 400px;
   }
 
-  .timeline-arrow {
+  .arrow {
     display: block;
     position: absolute;
     top: 18px;
   }
 
-  .timeline-arrow:after,
-  .timeline-arrow:before {
+  .arrow:after,
+  .arrow:before {
     border: medium solid transparent;
     content: ' ';
     position: absolute;
   }
 
-  .timeline-left-side {
+  .leftSide {
     padding-right: 70px;
     text-align: right;
   }
 
-  .timeline-left-side .timeline-arrow {
+  .leftSide .arrow {
     right: 33px;
   }
 
-  .timeline-left-side .timeline-arrow:after,
-  .timeline-left-side .timeline-arrow:before {
+  .leftSide .arrow:after,
+  .leftSide .arrow:before {
     right: 100%;
   }
 
-  .timeline-left-side .timeline-arrow:after {
+  .leftSide .arrow:after {
     border-color: rgba(255, 255, 255, 0);
     border-right-color: #fff;
     border-width: 6px;
     margin-top: -6px;
   }
 
-  .timeline-left-side .timeline-arrow:before {
+  .leftSide .arrow:before {
     border-color: rgba(222, 3, 127, 0);
-    border-right-color: #890f3a;
+    border-right-color: var(--primary-color);
     border-width: 7px;
     margin-top: -7px;
   }
 
-  .timeline-left-side.date-circle:after {
+  .leftSide.dateCircle:after {
     right: -10.5px;
   }
 
-  .timeline-right-side {
+  .rightSide {
     padding-left: 70px;
     text-align: left;
   }
 
-  .timeline-right-side .timeline-arrow {
+  .rightSide .arrow {
     left: 33px;
   }
 
-  .timeline-right-side .timeline-arrow:after,
-  .timeline-right-side .timeline-arrow:before {
+  .rightSide .arrow:after,
+  .rightSide .arrow:before {
     left: 100%;
   }
 
-  .timeline-right-side .timeline-arrow:after {
+  .rightSide .arrow:after {
     border-color: rgba(255, 255, 255, 0);
     border-left-color: #fff;
     border-width: 6px;
     margin-top: -6px;
   }
 
-  .timeline-right-side .timeline-arrow:before {
+  .rightSide .arrow:before {
     border-color: rgba(222, 3, 127, 0);
-    border-left-color: #890f3a;
+    border-left-color: var(--primary-color);
     border-width: 7px;
     margin-top: -7px;
   }
 
-  .timeline-right-side.date-circle:after {
+  .rightSide.dateCircle:after {
     left: -10.5px;
   }
 }

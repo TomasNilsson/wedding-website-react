@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import './Countdown.css'
+import styles from './Countdown.module.css'
 
 class Countdown extends Component {
   constructor(props) {
@@ -86,47 +86,39 @@ class Countdown extends Component {
 
     return (
       <div className={this.props.className}>
-        <span className="countdown-col">
-          <span className="countdown-col-element">
-            <strong className="countdown-col-element-number">
+        <span className={styles.column}>
+          <span className={styles.columnElement}>
+            <strong className={styles.columnElementNumber}>
               {this.addLeadingZeros(countDown.days)}
             </strong>
-            <span className="countdown-col-element-text">
-              {countDown.days === 1 ? 'dag' : 'dagar'}
-            </span>
+            <span>{countDown.days === 1 ? 'dag' : 'dagar'}</span>
           </span>
         </span>
 
-        <span className="countdown-col">
-          <span className="countdown-col-element">
-            <strong className="countdown-col-element-number">
+        <span className={styles.column}>
+          <span className={styles.columnElement}>
+            <strong className={styles.columnElementNumber}>
               {this.addLeadingZeros(countDown.hours)}
             </strong>
-            <span className="countdown-col-element-text">
-              {countDown.hours === 1 ? 'timme' : 'timmar'}
-            </span>
+            <span>{countDown.hours === 1 ? 'timme' : 'timmar'}</span>
           </span>
         </span>
 
-        <span className="countdown-col">
-          <span className="countdown-col-element">
-            <strong className="countdown-col-element-number">
+        <span className={styles.column}>
+          <span className={styles.columnElement}>
+            <strong className={styles.columnElementNumber}>
               {this.addLeadingZeros(countDown.min)}
             </strong>
-            <span className="countdown-col-element-text">
-              {countDown.min === 1 ? 'minut' : 'minuter'}
-            </span>
+            <span>{countDown.min === 1 ? 'minut' : 'minuter'}</span>
           </span>
         </span>
 
-        <span className="countdown-col">
-          <span className="countdown-col-element">
-            <strong className="countdown-col-element-number">
+        <span className={styles.column}>
+          <span className={styles.columnElement}>
+            <strong className={styles.columnElementNumber}>
               {this.addLeadingZeros(countDown.sec)}
             </strong>
-            <span className="countdown-col-element-text">
-              {countDown.sec === 1 ? 'sekund' : 'sekunder'}
-            </span>
+            <span>{countDown.sec === 1 ? 'sekund' : 'sekunder'}</span>
           </span>
         </span>
       </div>

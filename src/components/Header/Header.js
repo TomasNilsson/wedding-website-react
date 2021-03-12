@@ -4,7 +4,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Link } from 'react-scroll'
 import Countdown from '../Countdown'
 import Input from '../Input'
-import './Header.css'
+import styles from './Header.module.css'
 
 const BACKGROUND_ANIMATION_DURATION = 5
 
@@ -28,7 +28,7 @@ class Header extends Component {
 
     return (
       <div
-        className="main-slider"
+        className={styles.imageSlider}
         style={
           backgroundImages.length > 0 && !isLoggedIn
             ? { backgroundImage: `url(${backgroundImages[0]})` }
@@ -48,9 +48,9 @@ class Header extends Component {
               }}
             />
           ))}
-        <div className="slider-content">
-          <h3 className="pre-title">{title}</h3>
-          <h1 className="title">
+        <div className={styles.sliderContent}>
+          <h3 className={styles.preTitle}>{title}</h3>
+          <h1 className={styles.title}>
             {names[0]} <i className="icon icon-hearts" /> {names[1]}
           </h1>
           {!isLoggedIn && (
@@ -62,25 +62,32 @@ class Header extends Component {
           )}
           <TransitionGroup component={null}>
             {isLoggedIn && (
-              <CSSTransition classNames="fade" timeout={700}>
+              <CSSTransition
+                classNames={{
+                  enter: styles.fadeEnter,
+                  enterActive: styles.fadeEnterActive,
+                  exit: styles.fadeExit,
+                  exitActive: styles.fadeExitActive,
+                }}
+                timeout={700}
+              >
                 <Fragment>
-                  <h5 className="date">
+                  <h5 className={styles.date}>
                     {new Intl.DateTimeFormat('sv-SE', {
                       year: 'numeric',
                       month: 'long',
                       day: 'numeric',
                     }).format(new Date(date))}
                   </h5>
-                  <Countdown date={date} className={'count-down'} />
-                  <div className="slider-scroll">
+                  <Countdown date={date} className={styles.countdown} />
+                  <div className={styles.scrollDownButton}>
                     <Link
-                      className="scroll-link"
                       to={scrollTo}
                       smooth={true}
                       offset={-60}
                       duration={1000}
                     >
-                      <i className="fa fa-angle-down fade-down" />
+                      <i className={`fa fa-angle-down ${styles.fadeDown}`} />
                     </Link>
                   </div>
                 </Fragment>

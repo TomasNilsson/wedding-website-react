@@ -1,18 +1,18 @@
 .nav {
   position: fixed;
-  top: 0px;
+  top: 0;
   width: 100%;
   height: 40px;
   z-index: 1000;
   background-color: #fff;
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
-  animation: background_white 0.75s;
+  animation: backgroundWhite 0.75s;
 }
 
-.nav-transparent {
+.navTransparent {
   background-color: rgba(255, 255, 255, 0);
   box-shadow: none;
-  animation: background_transparent 0.75s;
+  animation: backgroundTransparent 0.75s;
 }
 
 @media (min-width: 992px) {
@@ -20,12 +20,12 @@
     height: 80px;
   }
 
-  .nav-transparent {
+  .navTransparent {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 
-@keyframes background_transparent {
+@keyframes backgroundTransparent {
   from {
     background-color: rgba(255, 255, 255, 0.5);
   }
@@ -34,7 +34,7 @@
   }
 }
 
-@keyframes background_white {
+@keyframes backgroundWhite {
   from {
     background-color: rgba(255, 255, 255, 0.2);
   }
@@ -43,41 +43,14 @@
   }
 }
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(-2%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes shrink {
-  0% {
-    width: 95%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-
-.nav-mobile-menu-button {
+.mobileMenuButton {
   position: absolute;
   z-index: 1000;
 }
 
-.nav .nav-icon {
+.nav .navIcon {
   margin: 0 auto;
-  color: #890f3a;
+  color: var(--primary-color);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -85,11 +58,11 @@
   padding: 5px 0;
 }
 
-.nav-transparent .nav-icon {
+.navTransparent .navIcon {
   display: none;
 }
 
-.nav .nav-content {
+.nav .navContent {
   max-width: 900px;
   padding: 0rem 3rem;
   margin: 0 auto;
@@ -99,11 +72,11 @@
   height: 100%;
 }
 
-.nav-items {
+.navItems {
   padding-left: 0;
 }
 
-.nav-item {
+.navItem {
   display: inline;
   margin-left: 2rem;
   color: #333;
@@ -111,27 +84,27 @@
   font-size: 16px;
 }
 
-.nav-item:first-child {
+.navItem:first-child {
   margin-left: 0 !important;
 }
 
-.nav-transparent .nav-item {
+.navTransparent .navItem {
   display: inline;
   margin-left: 2rem;
   color: #fff;
 }
 
-.nav-item > .active {
-  border-bottom: 1px solid #890f3a;
+.navItem > .active {
+  border-bottom: 1px solid var(--primary-color);
 }
 
-.nav-item:hover {
+.navItem:hover {
   color: #000;
-  border-bottom: 1px solid #890f3a;
+  border-bottom: 1px solid var(--primary-color);
   cursor: pointer;
 }
 
-.nav-transparent .nav-item:hover {
+.navTransparent .navItem:hover {
   color: #fff;
   border-bottom: 1px solid #fff;
 }

@@ -1,4 +1,4 @@
-.image-section {
+.section {
   position: relative;
   z-index: 1;
   background-image: url(../../images/full-width-image.jpg);
@@ -9,7 +9,7 @@
   margin-top: 30px;
 }
 
-.image-section:after {
+.section:after {
   content: '';
   position: absolute;
   top: 0;
@@ -20,13 +20,13 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-.image-section-text-wrapper {
+.sectionTextWrapper {
   width: 100%;
   max-width: 740px;
   margin: 0 auto;
 }
 
-.image-section-heading h2 {
+.sectionHeading h2 {
   font-family: 'Playball', cursive;
   font-weight: normal;
   font-size: 50px;
@@ -34,39 +34,27 @@
   overflow: auto;
 }
 
-.image-section-text {
+.sectionText {
   line-height: 1.5em;
   font-size: 18px;
 }
 
-.image-section-text a {
+.sectionText a {
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
 }
 
-.image-section-text a:hover {
+.sectionText a:hover {
   text-decoration: underline;
 }
 
-.image-section-child-wrapper {
-  width: 100%;
-  max-width: 287px;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.6);
-  margin: 0 auto;
-}
-
 @media (min-width: 992px) {
-  .image-section {
+  .section {
     padding: 70px 20px;
   }
 
-  .image-section-text {
+  .sectionText {
     font-size: 23px;
-  }
-
-  .image-section-child-wrapper {
-    max-width: 850px;
   }
 }

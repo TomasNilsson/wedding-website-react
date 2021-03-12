@@ -1,8 +1,8 @@
-.countdown-col {
+.column {
   display: inline-block;
 }
 
-.countdown-col-element {
+.columnElement {
   display: flex;
   flex-direction: column;
   margin: 0 12px;
@@ -10,18 +10,18 @@
   font-family: 'Raleway';
 }
 
-.countdown-col-element-number {
+.columnElementNumber {
   font-size: 25px;
   font-family: 'Lato';
 }
 
 @media (min-width: 992px) {
-  .countdown-col-element {
+  .columnElement {
     margin: 0 20px;
     font-size: 16px;
   }
 
-  .countdown-col-element-number {
+  .columnElementNumber {
     font-size: 40px;
   }
 }
