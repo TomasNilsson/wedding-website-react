@@ -1,3 +1,5 @@
+@import '../../customize/variables';
+
 .section {
   min-height: 450px;
   display: flex;
@@ -25,7 +27,7 @@
 }
 
 .section a {
-  color: var(--primary-color);
+  color: $primary-color;
   text-decoration: none;
 }
 

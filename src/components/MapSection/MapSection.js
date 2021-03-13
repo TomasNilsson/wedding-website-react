@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import GoogleMap from 'google-map-react'
 import MapLocation from '../MapLocation'
 import MapMarker from '../MapMarker'
-import styles from './MapSection.module.css'
+import styles from './MapSection.module.scss'
 
 class MapSection extends Component {
   constructor(props) {

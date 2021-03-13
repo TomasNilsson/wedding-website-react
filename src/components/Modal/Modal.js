@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Modal as ModalComponent } from 'react-responsive-modal'
 import Section from '../Section'
 import 'react-responsive-modal/styles.css'
-import styles from './Modal.module.css'
+import styles from './Modal.module.scss'
 
 class Modal extends Component {
   constructor(props) {

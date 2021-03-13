@@ -4,9 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Customize content
 
-Change the content of the file [src/content.json](src/content.json) to change text, images and other information on the wedding website.
+Change the content of the file [src/customize/content.json](src/customize/content.json) to change text, images and other information on the wedding website.
 
 [Markdown](https://guides.github.com/features/mastering-markdown/) syntax is supported for styling of the text (a [Markdown editor](https://codesandbox.io/embed/markdown-live-preview-reactmarkdown-9v5ek?fontsize=14&hidenavigation=1&theme=dark&view=preview) can be used to simplify editing).
+
+Change variables in [src/customize/\_variables.scss](src/customize/_variables.scss) to adjust colors, fonts and other styling.
 
 ## Environment variables
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import classNames from 'classnames'
-import styles from './MapLocation.module.css'
+import styles from './MapLocation.module.scss'
 
 const MapLocation = ({ icon, title, text, hovered }) => (
   <div className={styles.wrapper}>

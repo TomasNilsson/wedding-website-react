@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import styles from './MobileMenu.module.css'
+import styles from './MobileMenu.module.scss'
 
 const MobileMenu = ({ open, children }) => (
   <div className={classNames(styles.container, open && styles.open)}>

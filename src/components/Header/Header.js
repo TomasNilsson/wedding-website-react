@@ -4,7 +4,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { Link } from 'react-scroll'
 import Countdown from '../Countdown'
 import Input from '../Input'
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 
 const BACKGROUND_ANIMATION_DURATION = 5
 

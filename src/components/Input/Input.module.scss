@@ -1,3 +1,5 @@
+@import '../../customize/variables';
+
 .field {
   width: 100%;
   height: 56px;
@@ -24,7 +26,7 @@
 .field.active input + label {
   top: 4px;
   opacity: 1;
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 .field input {

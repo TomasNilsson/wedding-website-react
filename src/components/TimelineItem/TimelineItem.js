@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import classNames from 'classnames'
-import styles from './TimelineItem.module.css'
+import styles from './TimelineItem.module.scss'
 
 const TimelineItem = ({ date, text, image, rightSide }) => (
   <div className={styles.container}>

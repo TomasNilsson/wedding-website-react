@@ -1,3 +1,5 @@
+@import '../../customize/variables';
+
 .section {
   position: relative;
   z-index: 1;
@@ -27,7 +29,7 @@
 }
 
 .sectionHeading h2 {
-  font-family: 'Playball', cursive;
+  font-family: $font-heading;
   font-weight: normal;
   font-size: 50px;
   margin: 0;

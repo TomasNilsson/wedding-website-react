@@ -1,21 +1,23 @@
+@import '../../customize/variables';
+
 .openModalButton {
-  color: var(--button-text-color);
+  color: $button-text-color;
   font-size: 16px;
-  font-family: 'Raleway', sans-serif;
-  background: var(--button-bg-color);
+  font-family: $font-standard;
+  background: $button-bg-color;
   padding: 16px;
   border-radius: 5px;
   display: inline-block;
-  border: 2px solid var(--button-border-color);
+  border: 2px solid $button-border-color;
   outline: 0;
   cursor: pointer;
   transition: all 0.4s ease 0s;
 }
 
 .openModalButton:hover {
-  background: var(--button-hover-bg-color);
-  color: var(--button-hover-text-color);
-  border-color: var(--button-hover-border-color);
+  background: $button-hover-bg-color;
+  color: $button-hover-text-color;
+  border-color: $button-hover-border-color;
 }
 
 .modal {
@@ -25,7 +27,7 @@
   min-height: 100%;
   box-sizing: border-box;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: $font-standard;
 }
 
 .closeButton {

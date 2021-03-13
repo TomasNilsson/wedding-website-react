@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './InstagramWall.module.css'
+import styles from './InstagramWall.module.scss'
 
 const InstagramWall = ({ wallUrl }) => (
   <div className={styles.wrapper}>

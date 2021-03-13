@@ -8,8 +8,8 @@ import Modal from './components/Modal'
 import Navbar from './components/Navbar'
 import Section from './components/Section'
 import Timeline from './components/Timeline'
-import content from './content.json'
-import './App.css'
+import content from './customize/content.json'
+import './App.scss'
 
 class App extends Component {
   constructor(props) {
@@ -69,7 +69,7 @@ class App extends Component {
           onInputChange={this.checkSecretCode}
         />
         {isLoggedIn && (
-          <div className="app-content">
+          <div className="container">
             <Section
               {...content.ourStory}
               childComponent={<Timeline items={content.timeline} />}

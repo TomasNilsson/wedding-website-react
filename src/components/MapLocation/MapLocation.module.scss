@@ -1,3 +1,5 @@
+@import '../../customize/variables';
+
 .wrapper {
   flex: 0 0 100%;
   padding: 20px;
@@ -6,7 +8,7 @@
 }
 
 .locationTitle h2 {
-  font-family: 'Great Vibes', cursive;
+  font-family: $font-heading;
   font-weight: normal;
   font-size: 46px;
   margin: 0;
@@ -18,12 +20,12 @@
 }
 
 .locationTitle.hovered h2 {
-  border-color: var(--primary-color);
+  border-color: $secondary-color;
 }
 
 .locationTitle i {
   margin-right: 15px;
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 @media (min-width: 768px) {

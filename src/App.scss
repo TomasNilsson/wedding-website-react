@@ -1,4 +1,5 @@
-@charset "UTF-8";
+@charset 'UTF-8';
+@import 'customize/variables';
 
 @font-face {
   font-family: 'wedding';
@@ -60,11 +61,11 @@
 
 .app {
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: $font-standard;
   color: #000000;
 }
 
-.app-content {
+.container {
   padding-bottom: 20px;
 }
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import styles from './Input.module.css'
+import styles from './Input.module.scss'
 
 class Input extends Component {
   constructor(props) {

@@ -1,3 +1,5 @@
+@import '../../customize/variables';
+
 .nav {
   position: fixed;
   top: 0;
@@ -50,7 +52,7 @@
 
 .nav .navIcon {
   margin: 0 auto;
-  color: var(--primary-color);
+  color: $primary-color;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -95,12 +97,12 @@
 }
 
 .navItem > .active {
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 1px solid $primary-color;
 }
 
 .navItem:hover {
   color: #000;
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 1px solid $primary-color;
   cursor: pointer;
 }
 

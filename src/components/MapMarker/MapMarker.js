@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import styles from './MapMarker.module.css'
+import styles from './MapMarker.module.scss'
 
 const MapMarker = ({ $hover, icon, title, showTooltip }) => (
   // google-map-react pass $hover prop to hovered component

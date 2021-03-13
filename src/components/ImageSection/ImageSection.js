@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import styles from './ImageSection.module.css'
+import styles from './ImageSection.module.scss'
 
 const ImageSection = ({ title, text, id, childComponent }) => (
   <section className={styles.section} id={id}>

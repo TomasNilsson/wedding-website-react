@@ -1,3 +1,5 @@
+@import '../../customize/variables';
+
 .section {
   margin: 20px;
   box-sizing: border-box;
@@ -15,7 +17,7 @@
 }
 
 .sectionHeading h2 {
-  font-family: 'Great Vibes', cursive;
+  font-family: $font-heading;
   font-weight: normal;
   font-size: 56px;
   margin: 0;
@@ -51,7 +53,7 @@
 }
 
 .sectionText a {
-  color: var(--primary-color);
+  color: $primary-color;
   text-decoration: none;
 }
 

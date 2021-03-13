@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Modal } from 'react-responsive-modal'
 import 'react-responsive-modal/styles.css'
-import styles from './FormsSection.module.css'
+import styles from './FormsSection.module.scss'
 
 class FormsSection extends Component {
   constructor(props) {

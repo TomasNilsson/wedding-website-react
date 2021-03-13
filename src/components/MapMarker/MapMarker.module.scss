@@ -1,24 +1,26 @@
-.marker {
-  --marker-size: 40px;
+@import '../../customize/variables';
 
+$marker-size: 40px;
+
+.marker {
   position: absolute;
-  width: var(--marker-size);
-  height: var(--marker-size);
-  left: calc(-1 * var(--marker-size) / 2);
-  top: calc(-1 * var(--marker-size) / 2);
-  border: 5px solid var(--secondary-color);
-  border-radius: var(--marker-size);
+  width: $marker-size;
+  height: $marker-size;
+  left: -$marker-size / 2;
+  top: -$marker-size / 2;
+  border: 5px solid $secondary-color;
+  border-radius: $marker-size;
   background-color: #ffffff;
   text-align: center;
-  color: var(--primary-color);
+  color: $primary-color;
   font-size: 35px;
   padding: 4px;
   cursor: pointer;
 }
 
 .markerHover {
-  border: 5px solid var(--primary-color);
-  color: var(--secondary-color);
+  border: 5px solid $primary-color;
+  color: $secondary-color;
 }
 
 .tooltip {

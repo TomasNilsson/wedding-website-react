@@ -1,6 +1,6 @@
 import React from 'react'
 import TimelineItem from '../TimelineItem'
-import styles from './Timeline.module.css'
+import styles from './Timeline.module.scss'
 
 const Timeline = ({ items = [] }) => (
   <div className={styles.timeline}>

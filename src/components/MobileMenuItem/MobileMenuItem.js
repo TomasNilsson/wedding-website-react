@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './MobileMenuItem.module.css'
+import styles from './MobileMenuItem.module.scss'
 
 const MobileMenuItem = ({ delay, onClick, children }) => (
   <div className={styles.container} style={{ animationDelay: delay }}>

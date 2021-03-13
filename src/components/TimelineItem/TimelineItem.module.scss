@@ -1,3 +1,5 @@
+@import '../../customize/variables';
+
 .container {
   padding-bottom: 20px;
   position: relative;
@@ -26,7 +28,7 @@
 }
 
 .dateCircle:after {
-  background: none repeat scroll 0 0 var(--primary-color);
+  background: none repeat scroll 0 0 $primary-color;
   border: 3px solid #ececec;
   border-radius: 50%;
   content: '';
@@ -82,7 +84,7 @@
 
   .leftSide .arrow:before {
     border-color: rgba(222, 3, 127, 0);
-    border-right-color: var(--primary-color);
+    border-right-color: $primary-color;
     border-width: 7px;
     margin-top: -7px;
   }
@@ -114,7 +116,7 @@
 
   .rightSide .arrow:before {
     border-color: rgba(222, 3, 127, 0);
-    border-left-color: var(--primary-color);
+    border-left-color: $primary-color;
     border-width: 7px;
     margin-top: -7px;
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import styles from './Countdown.module.css'
+import styles from './Countdown.module.scss'
 
 class Countdown extends Component {
   constructor(props) {

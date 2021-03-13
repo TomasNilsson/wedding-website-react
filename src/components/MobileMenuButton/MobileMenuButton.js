@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import styles from './MobileMenuButton.module.css'
+import styles from './MobileMenuButton.module.scss'
 
 const MobileMenuButton = ({ className, color = '#000000', onClick, open }) => (
   <div className={classNames(styles.container, className)} onClick={onClick}>

@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import MobileMenu from '../MobileMenu'
 import MobileMenuButton from '../MobileMenuButton'
 import MobileMenuItem from '../MobileMenuItem'
-import styles from './Navbar.module.css'
+import styles from './Navbar.module.scss'
 
 class Navbar extends Component {
   constructor(props) {
