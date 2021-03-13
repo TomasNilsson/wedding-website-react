@@ -1,0 +1,30 @@
+@import '../../../customize/variables';
+
+.button {
+  color: $button-text-color;
+  font-size: 16px;
+  font-family: $font-standard;
+  background-color: $button-bg-color;
+  padding: 16px;
+  border-radius: 5px;
+  display: inline-block;
+  border: 2px solid $button-border-color;
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+
+  &:hover {
+    background-color: $button-hover-bg-color;
+    color: $button-hover-text-color;
+    border-color: $button-hover-border-color;
+  }
+
+  &.large {
+    font-size: 18px;
+    padding: 20px;
+
+    @media (min-width: 992px) {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
+import Button from '../../shared/Button'
 import Modal from '../../shared/Modal'
 import styles from './FormsSection.module.scss'
 
@@ -42,14 +43,14 @@ const FormsSection = ({ forms, id }) => {
                 {text}
               </ReactMarkdown>
             )}
-            <button
-              className={styles.openFormButton}
+            <Button
+              large
               onClick={() =>
                 newWindow ? openNewWindow(url) : openFormModal(id)
               }
             >
               {buttonText}
-            </button>
+            </Button>
             <Modal
               open={id === selectedFormId}
               onClose={closeFormModal}

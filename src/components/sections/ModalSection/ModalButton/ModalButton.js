@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
+import Button from '../../../shared/Button'
 import Modal from '../../../shared/Modal'
 import Section from '../../Section'
-import styles from './ModalButton.module.scss'
 
 const ModalButton = ({ buttonText, ...modalContent }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -17,9 +17,7 @@ const ModalButton = ({ buttonText, ...modalContent }) => {
   return (
     <div>
       <p>
-        <button className={styles.openModalButton} onClick={openModal}>
-          {buttonText}
-        </button>
+        <Button onClick={openModal}>{buttonText}</Button>
       </p>
       <Modal open={isModalOpen} onClose={closeModal}>
         <Section {...modalContent} />

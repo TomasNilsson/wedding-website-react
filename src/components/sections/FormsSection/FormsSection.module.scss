@@ -50,26 +50,6 @@
   font-size: 18px;
 }
 
-.openFormButton {
-  color: $button-text-color;
-  font-size: 18px;
-  font-family: $font-standard;
-  background-color: $button-bg-color;
-  padding: 20px;
-  border-radius: 5px;
-  display: inline-block;
-  border: 2px solid $button-border-color;
-  outline: 0;
-  cursor: pointer;
-  transition: all 0.4s ease 0s;
-}
-
-.openFormButton:hover {
-  background-color: $button-hover-bg-color;
-  color: $button-hover-text-color;
-  border-color: $button-hover-border-color;
-}
-
 .formModalIframe {
   max-width: 100%;
   height: 100%;
@@ -82,10 +62,6 @@
 
   .subsectionText {
     font-size: 23px;
-  }
-
-  .openFormButton {
-    font-size: 20px;
   }
 }
 
