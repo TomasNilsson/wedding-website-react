@@ -85,7 +85,7 @@ class App extends Component {
               <FormsSection {...content.rsvp} />
             )}
             {!this.isFuture(content.imageUpload.startDate) && (
-              <FormsSection {...content.imageUpload} newWindow />
+              <FormsSection {...content.imageUpload} />
             )}
             <Section {...content.contact} />
             <Section {...content.footer} />

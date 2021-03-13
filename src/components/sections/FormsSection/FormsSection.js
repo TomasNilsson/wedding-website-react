@@ -1,45 +1,20 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Modal } from 'react-responsive-modal'
-import 'react-responsive-modal/styles.css'
+import Modal from '../../shared/Modal'
 import styles from './FormsSection.module.scss'
 
-class FormsSection extends Component {
-  constructor(props) {
-    super(props)
+const FormsSection = ({ forms, id }) => {
+  const [selectedFormId, setSelectedFormId] = useState('')
 
-    this.state = {
-      forms: Object.assign(
-        ...props.forms.map((form) => ({
-          [form.id]: { open: false },
-        }))
-      ),
-    }
+  const openFormModal = (formId) => {
+    setSelectedFormId(formId)
   }
 
-  openModal = (id) => {
-    this.setState((state) => ({
-      forms: {
-        ...state.forms,
-        [id]: {
-          open: true,
-        },
-      },
-    }))
+  const closeFormModal = () => {
+    setSelectedFormId('')
   }
 
-  closeModal = (id) => {
-    this.setState((state) => ({
-      forms: {
-        ...state.forms,
-        [id]: {
-          open: false,
-        },
-      },
-    }))
-  }
-
-  openNewWindow = (url) => {
+  const openNewWindow = (url) => {
     const width = 640
     const height = 800
     const left = (window.screen.width - width) / 2
@@ -51,61 +26,51 @@ class FormsSection extends Component {
     )
   }
 
-  render() {
-    const { forms, id, newWindow } = this.props
-    return (
-      <section className={styles.section} id={id}>
-        {forms &&
-          forms.map((form) => (
-            <div className={styles.subsectionWrapper} key={form.id}>
-              <div className={styles.subsectionHeading}>
-                <h2>{form.title}</h2>
-              </div>
-              {!!form.text && (
-                <ReactMarkdown
-                  className={styles.subsectionText}
-                  linkTarget="_blank"
-                >
-                  {form.text}
-                </ReactMarkdown>
-              )}
-              <button
-                className={styles.openFormButton}
-                onClick={() =>
-                  newWindow
-                    ? this.openNewWindow(form.url)
-                    : this.openModal(form.id)
-                }
-              >
-                {form.buttonText}
-              </button>
-              <Modal
-                open={this.state.forms[form.id].open}
-                onClose={() => this.closeModal(form.id)}
-                center
-                classNames={{
-                  modal: styles.formModal,
-                  closeButton: styles.formModalCloseButton,
-                }}
-                focusTrapped={false}
-              >
-                <iframe
-                  className={styles.formModalIframe}
-                  title={form.title}
-                  src={form.url}
-                  width="640"
-                  frameBorder="0"
-                  marginHeight="0"
-                  marginWidth="0"
-                >
-                  Loading...
-                </iframe>
-              </Modal>
+  return (
+    <section className={styles.section} id={id}>
+      {forms &&
+        forms.map(({ id, title, text, buttonText, url, newWindow = false }) => (
+          <div className={styles.subsectionWrapper} key={id}>
+            <div className={styles.subsectionHeading}>
+              <h2>{title}</h2>
             </div>
-          ))}
-      </section>
-    )
-  }
+            {!!text && (
+              <ReactMarkdown
+                className={styles.subsectionText}
+                linkTarget="_blank"
+              >
+                {text}
+              </ReactMarkdown>
+            )}
+            <button
+              className={styles.openFormButton}
+              onClick={() =>
+                newWindow ? openNewWindow(url) : openFormModal(id)
+              }
+            >
+              {buttonText}
+            </button>
+            <Modal
+              open={id === selectedFormId}
+              onClose={closeFormModal}
+              fullHeight
+            >
+              <iframe
+                className={styles.formModalIframe}
+                title={title}
+                src={url}
+                width="640"
+                frameBorder="0"
+                marginHeight="0"
+                marginWidth="0"
+              >
+                Loading...
+              </iframe>
+            </Modal>
+          </div>
+        ))}
+    </section>
+  )
 }
 
 export default FormsSection

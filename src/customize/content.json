@@ -159,7 +159,8 @@
         "title": "Image Upload",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "buttonText": "Upload images",
-        "url": "https://www.dropbox.com/request/yourId"
+        "url": "https://www.dropbox.com/request/yourId",
+        "newWindow": true
       }
     ],
     "startDate": "2030-10-05T14:00:00+02:00"
