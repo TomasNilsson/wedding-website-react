@@ -103,6 +103,25 @@
     "modalTitle": "Accomodation",
     "modalText": "**Lorem ipsum dolor sit amet** consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
+  "imageGrid": {
+    "id": "imageGrid",
+    "title": "Ellinge Slott",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "images": [
+      {
+        "src": "https://lh3.ggpht.com/p/AF1QipPLk-bshC2awIF6kpSE8sm2VaffMHHZsk4EPajz=s1536",
+        "caption": "Ellinge Slott"
+      },
+      {
+        "src": "https://lh3.ggpht.com/p/AF1QipOXBHQSGq0Slq5-YJRNYcH1I5Rz6nCDmhijFz3_=s1536",
+        "caption": "Ellinge Slott"
+      },
+      {
+        "src": "https://lh3.ggpht.com/p/AF1QipP1xDp_pZ-ieN3asorcx812ihW9SOimbCcQzgOH=s1536",
+        "caption": "Ellinge Slott"
+      }
+    ]
+  },
   "wishlist": {
     "id": "wishlist",
     "title": "Wishlist",

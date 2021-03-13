@@ -1,0 +1,16 @@
+.gridWrapper {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+  border: 5px solid transparent;
+  max-height: 180px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  margin: 2px;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import FormsSection from './components/FormsSection'
 import Header from './components/Header'
+import ImageGrid from './components/ImageGrid'
 import ImageSection from './components/ImageSection'
 import InstagramWall from './components/InstagramWall'
 import MapSection from './components/MapSection'
@@ -44,6 +45,7 @@ class App extends Component {
               'info',
               'map',
               'miscInfo',
+              'imageGrid',
               'wishlist',
               'rsvp',
               'imageUpload',
@@ -95,6 +97,10 @@ class App extends Component {
                   text={content.miscInfo.modalText}
                 />
               }
+            />
+            <ImageSection
+              {...content.imageGrid}
+              childComponent={<ImageGrid images={content.imageGrid.images} />}
             />
             <Section {...content.wishlist} />
             {this.isFuture(content.rsvp.endDate) && (
