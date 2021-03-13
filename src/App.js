@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-import FormsSection from './components/FormsSection'
-import Header from './components/Header'
-import ImageGrid from './components/ImageGrid'
-import ImageSection from './components/ImageSection'
-import InstagramWall from './components/InstagramWall'
-import MapSection from './components/MapSection'
-import Modal from './components/Modal'
-import Navbar from './components/Navbar'
-import Section from './components/Section'
-import Timeline from './components/Timeline'
+import FormsSection from './components/sections/FormsSection'
+import Header from './components/header/Header'
+import ImageGridSection from './components/sections/ImageGridSection'
+import InstagramWallSection from './components/sections/InstagramWallSection'
+import MapSection from './components/sections/MapSection'
+import ModalSection from './components/sections/ModalSection'
+import Navbar from './components/navigation/Navbar'
+import Section from './components/sections/Section'
+import TimelineSection from './components/sections/TimelineSection'
 import content from './customize/content.json'
 import './App.scss'
 
@@ -72,36 +71,15 @@ class App extends Component {
         />
         {isLoggedIn && (
           <div className="container">
-            <Section
+            <TimelineSection
               {...content.ourStory}
-              childComponent={<Timeline items={content.timeline} />}
+              timeline={content.timeline}
             />
-            <ImageSection
-              title={content.hashtag.title}
-              text={content.hashtag.text}
-              id={content.hashtag.id}
-              childComponent={
-                <InstagramWall wallUrl={content.hashtag.wallUrl} />
-              }
-            />
+            <InstagramWallSection {...content.hashtag} />
             <Section {...content.info} />
             <MapSection {...content.map} />
-            <Section
-              title={content.miscInfo.title}
-              text={content.miscInfo.text}
-              id={content.miscInfo.id}
-              childComponent={
-                <Modal
-                  buttonText={content.miscInfo.modalButton}
-                  title={content.miscInfo.modalTitle}
-                  text={content.miscInfo.modalText}
-                />
-              }
-            />
-            <ImageSection
-              {...content.imageGrid}
-              childComponent={<ImageGrid images={content.imageGrid.images} />}
-            />
+            <ModalSection {...content.miscInfo} />
+            <ImageGridSection {...content.imageGrid} />
             <Section {...content.wishlist} />
             {this.isFuture(content.rsvp.endDate) && (
               <FormsSection {...content.rsvp} />

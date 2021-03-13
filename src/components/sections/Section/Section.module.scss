@@ -1,0 +1,62 @@
+@import '../../../customize/variables';
+
+.section {
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.sectionTextWrapper {
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.sectionHeading {
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.sectionHeading h2 {
+  font-family: $font-heading;
+  font-weight: normal;
+  font-size: 56px;
+  margin: 0;
+}
+
+.sectionSeparator {
+  padding-bottom: 15px;
+}
+
+.sectionHeading:after,
+.sectionSeparator:after {
+  content: '';
+  background: url('../../../images/separator.png') no-repeat center center;
+  height: 65px;
+  display: block;
+}
+
+.sectionText {
+  line-height: 1.5em;
+  font-size: 16px;
+}
+
+.sectionText ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0;
+}
+
+.sectionText h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.sectionText a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.sectionText a:hover {
+  text-decoration: underline;
+}

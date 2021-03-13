@@ -1,0 +1,128 @@
+@import '../../../customize/variables';
+
+.section {
+  position: relative;
+  z-index: 1;
+  background-image: url(../../../images/full-width-image.jpg);
+  background-size: cover;
+  color: #fff;
+  padding: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.section:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.subsectionWrapper {
+  flex: 0 0 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  padding: 0 0 50px;
+  box-sizing: border-box;
+}
+
+.subsectionWrapper:last-child {
+  padding: 0;
+}
+
+.subsectionHeading h2 {
+  font-family: $font-heading;
+  font-weight: normal;
+  font-size: 50px;
+  margin: 0;
+  overflow: auto;
+}
+
+.subsectionText {
+  line-height: 1.5em;
+  font-size: 18px;
+}
+
+.openFormButton {
+  color: $button-text-color;
+  font-size: 18px;
+  font-family: $font-standard;
+  background-color: $button-bg-color;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: 2px solid $button-border-color;
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+}
+
+.openFormButton:hover {
+  background-color: $button-hover-bg-color;
+  color: $button-hover-text-color;
+  border-color: $button-hover-border-color;
+}
+
+.formModal {
+  width: 100%;
+  height: 100vh;
+  padding: 50px 10px 10px;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.formModalIframe {
+  max-width: 100%;
+  height: 100%;
+}
+
+.formModalCloseButton {
+  cursor: pointer;
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .formModal {
+    border-radius: 5px;
+    padding: 1.2rem;
+    padding-right: 50px;
+    width: auto;
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section {
+    padding: 70px 20px;
+  }
+
+  .subsectionText {
+    font-size: 23px;
+  }
+
+  .openFormButton {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .subsectionWrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 50px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .subsectionWrapper {
+    padding: 0 100px !important;
+  }
+}

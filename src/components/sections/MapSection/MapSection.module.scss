@@ -1,0 +1,36 @@
+@import '../../../customize/variables';
+
+.section {
+  min-height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.subsectionWrapper {
+  min-height: 450px;
+  display: flex;
+  flex: 0 0 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 992px) {
+  .subsectionWrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.section a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,45 @@
+@import '../../../../customize/variables';
+
+.openModalButton {
+  color: $button-text-color;
+  font-size: 16px;
+  font-family: $font-standard;
+  background: $button-bg-color;
+  padding: 16px;
+  border-radius: 5px;
+  display: inline-block;
+  border: 2px solid $button-border-color;
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+}
+
+.openModalButton:hover {
+  background: $button-hover-bg-color;
+  color: $button-hover-text-color;
+  border-color: $button-hover-border-color;
+}
+
+.modal {
+  padding: 0 0 1.2rem;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: $font-standard;
+}
+
+.closeButton {
+  cursor: pointer;
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    border-radius: 5px;
+    width: auto;
+    max-width: 800px;
+    min-height: 0;
+  }
+}

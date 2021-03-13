@@ -1,0 +1,53 @@
+@import '../../../../customize/variables';
+
+$marker-size: 40px;
+
+.marker {
+  position: absolute;
+  width: $marker-size;
+  height: $marker-size;
+  left: -$marker-size / 2;
+  top: -$marker-size / 2;
+  border: 5px solid $secondary-color;
+  border-radius: $marker-size;
+  background-color: #ffffff;
+  text-align: center;
+  color: $primary-color;
+  font-size: 35px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.markerHover {
+  border: 5px solid $primary-color;
+  color: $secondary-color;
+}
+
+.tooltip {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translate(-50%, -100%);
+  z-index: 10;
+}
+
+.tooltipArrow {
+  position: absolute;
+  top: auto;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #000000;
+  margin-left: -5px;
+}
+
+.tooltipLabel {
+  padding: 5px 8px;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 4px;
+}
