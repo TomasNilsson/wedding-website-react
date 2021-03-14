@@ -4,7 +4,7 @@ import styles from './MobileMenu.module.scss'
 
 const MobileMenu = ({ open, children }) => (
   <div className={classNames(styles.container, open && styles.open)}>
-    {!!open && <div className={styles.menuList}>{children}</div>}
+    {!!open && <ul className={styles.menuList}>{children}</ul>}
   </div>
 )
 

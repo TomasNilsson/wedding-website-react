@@ -9,12 +9,76 @@
   background-color: #fff;
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
   animation: backgroundWhite 0.75s;
+
+  .mobileMenuButton {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .navIcon {
+    margin: 0 auto;
+    color: $primary-color;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    font-size: 28px;
+    padding: 5px 0;
+  }
+
+  .navContent {
+    max-width: 900px;
+    padding: 0rem 3rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .navItems {
+    padding-left: 0;
+  }
+
+  .navItem {
+    display: inline;
+    margin-left: 2rem;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+
+    &:first-child {
+      margin-left: 0 !important;
+    }
+
+    &:hover {
+      color: #000;
+      border-bottom: 1px solid $primary-color;
+      cursor: pointer;
+    }
+
+    .active {
+      border-bottom: 1px solid $primary-color;
+    }
+  }
 }
 
 .navTransparent {
   background-color: rgba(255, 255, 255, 0);
   box-shadow: none;
   animation: backgroundTransparent 0.75s;
+
+  .navIcon {
+    display: none;
+  }
+
+  .navItem {
+    color: #fff;
+
+    :hover {
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -43,70 +107,4 @@
   to {
     background-color: #fff;
   }
-}
-
-.mobileMenuButton {
-  position: absolute;
-  z-index: 1000;
-}
-
-.nav .navIcon {
-  margin: 0 auto;
-  color: $primary-color;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  font-size: 28px;
-  padding: 5px 0;
-}
-
-.navTransparent .navIcon {
-  display: none;
-}
-
-.nav .navContent {
-  max-width: 900px;
-  padding: 0rem 3rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.navItems {
-  padding-left: 0;
-}
-
-.navItem {
-  display: inline;
-  margin-left: 2rem;
-  color: #333;
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.navItem:first-child {
-  margin-left: 0 !important;
-}
-
-.navTransparent .navItem {
-  display: inline;
-  margin-left: 2rem;
-  color: #fff;
-}
-
-.navItem > .active {
-  border-bottom: 1px solid $primary-color;
-}
-
-.navItem:hover {
-  color: #000;
-  border-bottom: 1px solid $primary-color;
-  cursor: pointer;
-}
-
-.navTransparent .navItem:hover {
-  color: #fff;
-  border-bottom: 1px solid #fff;
 }

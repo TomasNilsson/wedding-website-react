@@ -18,29 +18,29 @@
 .lineTop {
   transform: none;
   margin-bottom: 5px;
-}
 
-.lineTop.open {
-  transform: rotate(45deg);
-  transform-origin: top left;
+  &.open {
+    transform: rotate(45deg);
+    transform-origin: top left;
+  }
 }
 
 .lineMiddle {
   opacity: 1;
   transform: none;
-}
 
-.lineMiddle.open {
-  opacity: 0;
-  transform: translateX(-16px);
+  &.open {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
 }
 
 .lineBottom {
   transform: none;
   margin-top: 5px;
-}
 
-.lineBottom.open {
-  transform: translateX(-1px) rotate(-45deg);
-  transform-origin: top left;
+  &.open {
+    transform: translateX(-1px) rotate(-45deg);
+    transform-origin: top left;
+  }
 }

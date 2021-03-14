@@ -59,13 +59,22 @@
   content: '\69';
 }
 
-.app {
+body {
+  margin: 0;
+  padding: 0;
   text-align: center;
   font-family: $font-standard;
   color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+main {
   padding-bottom: 20px;
 }
 

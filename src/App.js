@@ -9,7 +9,6 @@ import Navbar from './components/navigation/Navbar'
 import Section from './components/sections/Section'
 import TimelineSection from './components/sections/TimelineSection'
 import content from './customize/content.json'
-import './App.scss'
 
 class App extends Component {
   constructor(props) {
@@ -36,41 +35,43 @@ class App extends Component {
 
     return (
       <div className="app">
-        {isLoggedIn && (
-          <Navbar
-            items={[
-              'ourStory',
-              'hashtag',
-              'info',
-              'map',
-              'miscInfo',
-              'imageGrid',
-              'wishlist',
-              'rsvp',
-              'imageUpload',
-            ]
-              .filter((item) => {
-                const startDate = content[item].startDate
-                const endDate = content[item].endDate
-                return !(
-                  (startDate && this.isFuture(startDate)) ||
-                  (endDate && !this.isFuture(endDate))
-                )
-              })
-              .map((item) => ({
-                id: content[item].id,
-                title: content[item].title,
-              }))}
+        <header>
+          {isLoggedIn && (
+            <Navbar
+              items={[
+                'ourStory',
+                'hashtag',
+                'info',
+                'map',
+                'miscInfo',
+                'imageGrid',
+                'wishlist',
+                'rsvp',
+                'imageUpload',
+              ]
+                .filter((item) => {
+                  const startDate = content[item].startDate
+                  const endDate = content[item].endDate
+                  return !(
+                    (startDate && this.isFuture(startDate)) ||
+                    (endDate && !this.isFuture(endDate))
+                  )
+                })
+                .map((item) => ({
+                  id: content[item].id,
+                  title: content[item].title,
+                }))}
+            />
+          )}
+          <Header
+            {...content.header}
+            scrollTo={content.ourStory.id}
+            isLoggedIn={isLoggedIn}
+            onInputChange={this.checkSecretCode}
           />
-        )}
-        <Header
-          {...content.header}
-          scrollTo={content.ourStory.id}
-          isLoggedIn={isLoggedIn}
-          onInputChange={this.checkSecretCode}
-        />
+        </header>
         {isLoggedIn && (
-          <div className="container">
+          <main>
             <TimelineSection
               {...content.ourStory}
               timeline={content.timeline}
@@ -89,7 +90,7 @@ class App extends Component {
             )}
             <Section {...content.contact} />
             <Section {...content.footer} />
-          </div>
+          </main>
         )}
       </div>
     )

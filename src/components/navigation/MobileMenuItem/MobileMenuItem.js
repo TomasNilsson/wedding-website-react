@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './MobileMenuItem.module.scss'
 
 const MobileMenuItem = ({ delay, onClick, children }) => (
-  <div className={styles.container} style={{ animationDelay: delay }}>
+  <li className={styles.container} style={{ animationDelay: delay }}>
     <div
       className={styles.menuItem}
       style={{ animationDelay: delay }}
@@ -11,7 +11,7 @@ const MobileMenuItem = ({ delay, onClick, children }) => (
       {children}
     </div>
     <div className={styles.line} style={{ animationDelay: delay }} />
-  </div>
+  </li>
 )
 
 export default MobileMenuItem
