@@ -13,6 +13,8 @@ const Header = ({
   title,
   names,
   date,
+  dateFormatLanguage,
+  countdownText,
   inputLabel,
   onInputChange,
   isLoggedIn,
@@ -44,7 +46,7 @@ const Header = ({
           />
         ))}
       <div className={styles.sliderContent}>
-        <h3 className={styles.preTitle}>{title}</h3>
+        <p className={styles.preTitle}>{title}</p>
         <h1 className={styles.title}>
           {names[0]} <i className="icon icon-hearts" /> {names[1]}
         </h1>
@@ -63,22 +65,28 @@ const Header = ({
               timeout={700}
             >
               <>
-                <h5 className={styles.date}>
-                  {new Intl.DateTimeFormat('sv-SE', {
+                <time dateTime={date} className={styles.date}>
+                  {new Intl.DateTimeFormat(dateFormatLanguage, {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',
                   }).format(new Date(date))}
-                </h5>
-                <Countdown date={date} className={styles.countdown} />
-                <div className={styles.scrollDownButton}>
+                </time>
+                <Countdown
+                  date={date}
+                  countdownText={countdownText}
+                  className={styles.countdown}
+                />
+                <div>
                   <Link
                     to={scrollTo}
                     smooth={true}
                     offset={-60}
                     duration={1000}
                   >
-                    <i className={`fa fa-angle-down ${styles.fadeDown}`} />
+                    <i
+                      className={`fas fa-angle-down ${styles.scrollDownButton}`}
+                    />
                   </Link>
                 </div>
               </>

@@ -1,138 +1,92 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState, useEffect } from 'react'
 import styles from './Countdown.module.scss'
 
-class Countdown extends Component {
-  constructor(props) {
-    super(props)
+const Countdown = ({
+  className,
+  date: targetDate = new Date(),
+  countdownText = {
+    days: ['day', 'days'],
+    hours: ['hour', 'hours'],
+    minutes: ['minute', 'minutes'],
+    seconds: ['second', 'seconds'],
+  },
+}) => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  })
 
-    this.state = {
-      days: 0,
-      hours: 0,
-      min: 0,
-      sec: 0,
+  useEffect(() => {
+    const updateCountdown = () => {
+      let diff =
+        (Date.parse(new Date(targetDate)) - Date.parse(new Date())) / 1000
+
+      // No updates needed when date is reached
+      if (diff < 0) return
+
+      const timeDiff = {
+        years: 0,
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+      }
+
+      // Calculate time difference between now and target date
+      const minuteInSec = 60
+      const hourInSec = 60 * minuteInSec
+      const dayInSec = 24 * hourInSec
+      const yearInSec = 365.25 * dayInSec
+      if (diff >= yearInSec) {
+        timeDiff.years = Math.floor(diff / yearInSec)
+        diff -= timeDiff.years * yearInSec
+      }
+      if (diff >= dayInSec) {
+        timeDiff.days = Math.floor(diff / dayInSec)
+        diff -= timeDiff.days * dayInSec
+      }
+      if (diff >= hourInSec) {
+        timeDiff.hours = Math.floor(diff / hourInSec)
+        diff -= timeDiff.hours * hourInSec
+      }
+      if (diff >= minuteInSec) {
+        timeDiff.minutes = Math.floor(diff / minuteInSec)
+        diff -= timeDiff.minutes * minuteInSec
+      }
+      timeDiff.seconds = diff
+
+      setTimeLeft(timeDiff)
     }
-  }
 
-  componentDidMount() {
-    this.updateCountdown()
+    updateCountdown()
     // Update every second
-    this.interval = setInterval(this.updateCountdown, 1000)
-  }
+    const interval = setInterval(updateCountdown, 1000)
+    return () => clearInterval(interval)
+  }, [targetDate])
 
-  componentWillUnmount() {
-    this.stop()
-  }
-
-  updateCountdown = () => {
-    const date = this.calculateCountdown(this.props.date)
-    date ? this.setState(date) : this.stop()
-  }
-
-  calculateCountdown(targetDate) {
-    let diff =
-      (Date.parse(new Date(targetDate)) - Date.parse(new Date())) / 1000
-
-    // Clear countdown when date is reached
-    if (diff <= 0) return false
-
-    const timeLeft = {
-      years: 0,
-      days: 0,
-      hours: 0,
-      min: 0,
-      sec: 0,
-    }
-
-    // Calculate time difference between now and target date
-    if (diff >= 365.25 * 86400) {
-      // 365.25 * 24 * 60 * 60
-      timeLeft.years = Math.floor(diff / (365.25 * 86400))
-      diff -= timeLeft.years * 365.25 * 86400
-    }
-    if (diff >= 86400) {
-      // 24 * 60 * 60
-      timeLeft.days = Math.floor(diff / 86400)
-      diff -= timeLeft.days * 86400
-    }
-    if (diff >= 3600) {
-      // 60 * 60
-      timeLeft.hours = Math.floor(diff / 3600)
-      diff -= timeLeft.hours * 3600
-    }
-    if (diff >= 60) {
-      timeLeft.min = Math.floor(diff / 60)
-      diff -= timeLeft.min * 60
-    }
-    timeLeft.sec = diff
-
-    return timeLeft
-  }
-
-  stop() {
-    clearInterval(this.interval)
-  }
-
-  addLeadingZeros(value) {
+  const addLeadingZeros = (value) => {
     value = String(value)
-    while (value.length < 2) {
-      value = '0' + value
-    }
-    return value
+    return value.length < 2 ? '0' + value : value
   }
 
-  render() {
-    const countDown = this.state
-
-    return (
-      <div className={this.props.className}>
-        <span className={styles.column}>
-          <span className={styles.columnElement}>
-            <strong className={styles.columnElementNumber}>
-              {this.addLeadingZeros(countDown.days)}
-            </strong>
-            <span>{countDown.days === 1 ? 'dag' : 'dagar'}</span>
-          </span>
-        </span>
-
-        <span className={styles.column}>
-          <span className={styles.columnElement}>
-            <strong className={styles.columnElementNumber}>
-              {this.addLeadingZeros(countDown.hours)}
-            </strong>
-            <span>{countDown.hours === 1 ? 'timme' : 'timmar'}</span>
-          </span>
-        </span>
-
-        <span className={styles.column}>
-          <span className={styles.columnElement}>
-            <strong className={styles.columnElementNumber}>
-              {this.addLeadingZeros(countDown.min)}
-            </strong>
-            <span>{countDown.min === 1 ? 'minut' : 'minuter'}</span>
-          </span>
-        </span>
-
-        <span className={styles.column}>
-          <span className={styles.columnElement}>
-            <strong className={styles.columnElementNumber}>
-              {this.addLeadingZeros(countDown.sec)}
-            </strong>
-            <span>{countDown.sec === 1 ? 'sekund' : 'sekunder'}</span>
-          </span>
-        </span>
-      </div>
-    )
-  }
-}
-
-Countdown.propTypes = {
-  className: PropTypes.string,
-  date: PropTypes.string.isRequired,
-}
-
-Countdown.defaultProps = {
-  date: new Date(),
+  return (
+    <div className={className}>
+      {['days', 'hours', 'minutes', 'seconds'].map((timePart) => (
+        <div key={timePart} className={styles.column}>
+          <div className={styles.columnElement}>
+            <div className={styles.columnElementNumber}>
+              {addLeadingZeros(timeLeft[timePart])}
+            </div>
+            <div>
+              {countdownText[timePart][timeLeft[timePart] === 1 ? 0 : 1]}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
 }
 
 export default Countdown

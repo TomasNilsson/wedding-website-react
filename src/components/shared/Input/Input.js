@@ -1,58 +1,34 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 import classNames from 'classnames'
 import styles from './Input.module.scss'
 
-class Input extends Component {
-  constructor(props) {
-    super(props)
+const Input = ({ label, type = 'text', onChange = () => {} }) => {
+  const [isActive, setIsActive] = useState(false)
+  const [value, setValue] = useState('')
 
-    this.state = {
-      active: false,
-      value: '',
-    }
-  }
-
-  handleChange = (event) => {
+  const handleChange = (event) => {
     const value = event.target.value
-    this.setState({ value })
-    this.props.onChange(value)
+    setValue(value)
+    onChange(value)
   }
 
-  render() {
-    const { active, value } = this.state
-    const { label, type } = this.props
-
-    return (
-      <div
-        className={classNames(styles.field, {
-          [styles.active]: active || value,
-        })}
-      >
-        <input
-          type={type}
-          value={value}
-          placeholder={label}
-          onChange={this.handleChange}
-          onFocus={() => this.setState({ active: true })}
-          onBlur={() => this.setState({ active: false })}
-        />
-        <label>{label}</label>
-      </div>
-    )
-  }
-}
-
-Input.propTypes = {
-  label: PropTypes.string,
-  type: PropTypes.string,
-  onChange: PropTypes.func,
-}
-
-Input.defaultProps = {
-  label: 'Label',
-  type: 'text',
-  onChange: () => {},
+  return (
+    <div
+      className={classNames(styles.field, {
+        [styles.active]: isActive || value,
+      })}
+    >
+      <input
+        type={type}
+        value={value}
+        placeholder={label}
+        onChange={handleChange}
+        onFocus={() => setIsActive(true)}
+        onBlur={() => setIsActive(false)}
+      />
+      <label>{label}</label>
+    </div>
+  )
 }
 
 export default Input
