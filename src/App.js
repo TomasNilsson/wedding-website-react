@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import FormsSection from './components/sections/FormsSection'
 import Header from './components/header/Header'
+import ImageSection from './components/sections/ImageSection'
 import ImageGridSection from './components/sections/ImageGridSection'
 import InstagramWallSection from './components/sections/InstagramWallSection'
 import MapSection from './components/sections/MapSection'
@@ -10,91 +11,70 @@ import Section from './components/sections/Section'
 import TimelineSection from './components/sections/TimelineSection'
 import content from './customize/content.json'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    !process.env.REACT_APP_SECRET_CODE
+  )
 
-    this.state = {
-      isLoggedIn: !process.env.REACT_APP_SECRET_CODE,
-    }
-  }
-
-  checkSecretCode = (value) => {
+  const checkSecretCode = (value) => {
     if (value === process.env.REACT_APP_SECRET_CODE) {
-      this.setState({
-        isLoggedIn: true,
-      })
+      setIsLoggedIn(true)
       window.gtag('event', 'login')
     }
   }
 
-  isFuture = (date) => new Date(date) > new Date()
+  const isFuture = (date) => new Date(date) > new Date()
 
-  render() {
-    const { isLoggedIn } = this.state
-
-    return (
-      <div className="app">
-        <header>
-          {isLoggedIn && (
-            <Navbar
-              items={[
-                'ourStory',
-                'hashtag',
-                'info',
-                'map',
-                'miscInfo',
-                'imageGrid',
-                'wishlist',
-                'rsvp',
-                'imageUpload',
-              ]
-                .filter((item) => {
-                  const startDate = content[item].startDate
-                  const endDate = content[item].endDate
-                  return !(
-                    (startDate && this.isFuture(startDate)) ||
-                    (endDate && !this.isFuture(endDate))
-                  )
-                })
-                .map((item) => ({
-                  id: content[item].id,
-                  title: content[item].title,
-                }))}
-            />
-          )}
-          <Header
-            {...content.header}
-            scrollTo={content.ourStory.id}
-            isLoggedIn={isLoggedIn}
-            onInputChange={this.checkSecretCode}
-          />
-        </header>
-        {isLoggedIn && (
-          <main>
-            <TimelineSection
-              {...content.ourStory}
-              timeline={content.timeline}
-            />
-            <InstagramWallSection {...content.hashtag} />
-            <Section {...content.info} />
-            <MapSection {...content.map} />
-            <ModalSection {...content.miscInfo} />
-            <ImageGridSection {...content.imageGrid} />
-            <Section {...content.wishlist} />
-            {this.isFuture(content.rsvp.endDate) && (
-              <FormsSection {...content.rsvp} />
-            )}
-            {!this.isFuture(content.imageUpload.startDate) && (
-              <FormsSection {...content.imageUpload} />
-            )}
-            <Section {...content.contact} />
-            <Section {...content.footer} />
-          </main>
-        )}
-      </div>
-    )
+  const sectionComponents = {
+    FormsSection,
+    ImageSection,
+    ImageGridSection,
+    InstagramWallSection,
+    MapSection,
+    ModalSection,
+    Section,
+    TimelineSection,
   }
+
+  const sections = content.sections.filter((section) => {
+    const startDate = section.startDate
+    const endDate = section.endDate
+    return !(
+      (startDate && isFuture(startDate)) ||
+      (endDate && !isFuture(endDate))
+    )
+  })
+
+  const navItems = sections
+    .filter((section) => !!section.inNavbar)
+    .map((section) => ({
+      id: section.id,
+      title: section.title,
+    }))
+
+  return (
+    <div className="app">
+      <header>
+        {isLoggedIn && <Navbar items={navItems} />}
+        <Header
+          {...content.header}
+          scrollTo={sections.length > 0 && sections[0].id}
+          isLoggedIn={isLoggedIn}
+          onInputChange={checkSecretCode}
+        />
+      </header>
+      {isLoggedIn && (
+        <main>
+          {sections.map(({ type, ...sectionContent }) => {
+            const SectionComponent = sectionComponents[type] || Section
+            return (
+              <SectionComponent key={sectionContent.id} {...sectionContent} />
+            )
+          })}
+        </main>
+      )}
+    </div>
+  )
 }
 
 export default App

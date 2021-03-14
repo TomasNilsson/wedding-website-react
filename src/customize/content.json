@@ -17,157 +17,179 @@
       "seconds": ["second", "seconds"]
     }
   },
-  "ourStory": {
-    "id": "ourStory",
-    "title": "Our Story",
-    "text": ""
-  },
-  "timeline": [
+  "sections": [
     {
-      "date": "2011-09-01",
-      "text": "**Lorem ipsum dolor sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "image": "../images/1000x500.png",
-      "side": "left"
+      "id": "ourStory",
+      "type": "TimelineSection",
+      "inNavbar": true,
+      "title": "Our Story",
+      "timeline": [
+        {
+          "date": "2011-09-01",
+          "text": "**Lorem ipsum dolor sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "image": "../images/1000x500.png",
+          "side": "left"
+        },
+        {
+          "date": "2017-11-20",
+          "text": "**Lorem ipsum dolor sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "side": "right"
+        },
+        {
+          "date": "2019-02-20",
+          "text": "**Lorem ipsum dolor sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "image": "../images/1000x500.png",
+          "side": "right"
+        }
+      ]
     },
     {
-      "date": "2017-11-20",
-      "text": "**Lorem ipsum dolor sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "side": "right"
+      "id": "hashtag",
+      "type": "InstagramWallSection",
+      "inNavbar": true,
+      "title": "#OurWedding",
+      "text": "Follow the hashtag [#OurWedding](https://www.instagram.com/explore/tags/ourwedding/). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "wallUrl": "https://walls.io/r3jeq?nobackground=1&show_header=0&columns=5"
     },
     {
-      "date": "2019-02-20",
-      "text": "**Lorem ipsum dolor sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "image": "../images/1000x500.png",
-      "side": "right"
+      "id": "info",
+      "type": "Section",
+      "inNavbar": true,
+      "title": "Info",
+      "text": "### Wedding Ceremony\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n### Wedding Party\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n### Speeches\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n* Toastmaster, [toastmaster@gmail.com](mailto:toastmaster@gmail.com), 07X-XXX XX XX\n* Toastmadame, [toastmadame@gmail.com](mailto:toastmadame@gmail.com), 07X-XXX XX XX\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n### Bus\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "id": "map",
+      "type": "MapSection",
+      "inNavbar": true,
+      "title": "Map",
+      "center": {
+        "lat": 55.76578,
+        "lng": 13.26489
+      },
+      "zoom": 11,
+      "locations": [
+        {
+          "id": "wedding",
+          "title": "Ceremony",
+          "text": "**When:** 14:00\n\n**Where:** Borlunda Kyrka, Eslöv\n\n**Link:** [Google Maps](https://goo.gl/maps/emwCfHeKa6F2)",
+          "icon": "rings",
+          "latitude": "55.800718",
+          "longitude": "13.3227702",
+          "link": "https://goo.gl/maps/emwCfHeKa6F2"
+        },
+        {
+          "id": "party",
+          "title": "Party",
+          "text": "**Where:** Ellinge slott, Ellinge Gård, Eslöv\n\n**Link:** [Google Maps](https://goo.gl/maps/ZDo9Vwz5Jok)",
+          "icon": "wine-glasses",
+          "latitude": "55.81167275",
+          "longitude": "13.287460530674393",
+          "link": "https://goo.gl/maps/ZDo9Vwz5Jok"
+        },
+        {
+          "id": "bus",
+          "title": "Bus",
+          "text": "**Where:** Lund C, stop M\n\n**Link:** [Skånetrafiken](https://www.skanetrafiken.se/globalassets/dokumentbank/terminalkartor2/2019/81216_lundc_terminalkarta_a3.pdf)",
+          "icon": "bus",
+          "latitude": "55.706388",
+          "longitude": "13.187646",
+          "link": "https://goo.gl/maps/zhi6htp3BiHAAWok6"
+        }
+      ],
+      "showLocationTextSection": true
+    },
+    {
+      "id": "miscInfo",
+      "type": "ModalSection",
+      "inNavbar": true,
+      "title": "More Info",
+      "text": "### Brunch\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n### Accomodation\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "modal": {
+        "buttonText": "Read more about accomodation",
+        "title": "Accomodation",
+        "text": "**Lorem ipsum dolor sit amet** consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      }
+    },
+    {
+      "id": "imageGrid",
+      "type": "ImageGridSection",
+      "inNavbar": true,
+      "title": "Ellinge Slott",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "images": [
+        {
+          "src": "https://lh3.ggpht.com/p/AF1QipPLk-bshC2awIF6kpSE8sm2VaffMHHZsk4EPajz=s1536",
+          "caption": "Ellinge Slott"
+        },
+        {
+          "src": "https://lh3.ggpht.com/p/AF1QipOXBHQSGq0Slq5-YJRNYcH1I5Rz6nCDmhijFz3_=s1536",
+          "caption": "Ellinge Slott"
+        },
+        {
+          "src": "https://lh3.ggpht.com/p/AF1QipP1xDp_pZ-ieN3asorcx812ihW9SOimbCcQzgOH=s1536",
+          "caption": "Ellinge Slott"
+        }
+      ]
+    },
+    {
+      "id": "wishlist",
+      "type": "Section",
+      "inNavbar": true,
+      "title": "Wishlist",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "id": "rsvp",
+      "type": "FormsSection",
+      "inNavbar": true,
+      "title": "RSVP",
+      "forms": [
+        {
+          "id": "wedding-form",
+          "title": "Wedding",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "buttonText": "Open sign-up form",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSfhXgh2KI8hz0dqCJlRqPib3kot-gEtBD9-xnySjaNRDncm5Q/viewform?embedded=true"
+        },
+        {
+          "id": "speech-form",
+          "title": "Speech",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "buttonText": "Open sign-up form",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSfhXgh2KI8hz0dqCJlRqPib3kot-gEtBD9-xnySjaNRDncm5Q/viewform?embedded=true"
+        }
+      ],
+      "endDate": "2030-10-05T14:00:00+02:00"
+    },
+    {
+      "id": "imageUpload",
+      "type": "FormsSection",
+      "inNavbar": true,
+      "title": "Image Upload",
+      "forms": [
+        {
+          "id": "upload-form",
+          "title": "Image Upload",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "buttonText": "Upload images",
+          "url": "https://www.dropbox.com/request/yourId",
+          "newWindow": true
+        }
+      ],
+      "startDate": "2030-10-05T14:00:00+02:00"
+    },
+    {
+      "id": "contact",
+      "type": "Section",
+      "inNavbar": true,
+      "title": "Contact Us",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:\n* Alice: 07X-XXX XX XX\n* Bob: 07X-XXX XX XX\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua: [wedding@gmail.com](mailto:wedding@gmail.com)"
+    },
+    {
+      "id": "footer",
+      "type": "Section",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
-  ],
-  "hashtag": {
-    "id": "hashtag",
-    "title": "#OurWedding",
-    "text": "Follow the hashtag [#OurWedding](https://www.instagram.com/explore/tags/ourwedding/). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "wallUrl": "https://walls.io/r3jeq?nobackground=1&show_header=0&columns=5"
-  },
-  "info": {
-    "id": "info",
-    "title": "Info",
-    "text": "### Wedding Ceremony\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n### Wedding Party\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n### Speeches\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n* Toastmaster, [toastmaster@gmail.com](mailto:toastmaster@gmail.com), 07X-XXX XX XX\n* Toastmadame, [toastmadame@gmail.com](mailto:toastmadame@gmail.com), 07X-XXX XX XX\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n### Bus\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  },
-  "map": {
-    "id": "map",
-    "title": "Map",
-    "center": {
-      "lat": 55.76578,
-      "lng": 13.26489
-    },
-    "zoom": 11,
-    "locations": [
-      {
-        "id": "wedding",
-        "title": "Ceremony",
-        "text": "**When:** 14:00\n\n**Where:** Borlunda Kyrka, Eslöv\n\n**Link:** [Google Maps](https://goo.gl/maps/emwCfHeKa6F2)",
-        "icon": "rings",
-        "latitude": "55.800718",
-        "longitude": "13.3227702",
-        "link": "https://goo.gl/maps/emwCfHeKa6F2"
-      },
-      {
-        "id": "party",
-        "title": "Party",
-        "text": "**Where:** Ellinge slott, Ellinge Gård, Eslöv\n\n**Link:** [Google Maps](https://goo.gl/maps/ZDo9Vwz5Jok)",
-        "icon": "wine-glasses",
-        "latitude": "55.81167275",
-        "longitude": "13.287460530674393",
-        "link": "https://goo.gl/maps/ZDo9Vwz5Jok"
-      },
-      {
-        "id": "bus",
-        "title": "Bus",
-        "text": "**Where:** Lund C, stop M\n\n**Link:** [Skånetrafiken](https://www.skanetrafiken.se/globalassets/dokumentbank/terminalkartor2/2019/81216_lundc_terminalkarta_a3.pdf)",
-        "icon": "bus",
-        "latitude": "55.706388",
-        "longitude": "13.187646",
-        "link": "https://goo.gl/maps/zhi6htp3BiHAAWok6"
-      }
-    ],
-    "showLocationTextSection": true
-  },
-  "miscInfo": {
-    "id": "miscInfo",
-    "title": "More Info",
-    "text": "### Brunch\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n### Accomodation\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "modal": {
-      "buttonText": "Read more about accomodation",
-      "title": "Accomodation",
-      "text": "**Lorem ipsum dolor sit amet** consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    }
-  },
-  "imageGrid": {
-    "id": "imageGrid",
-    "title": "Ellinge Slott",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "images": [
-      {
-        "src": "https://lh3.ggpht.com/p/AF1QipPLk-bshC2awIF6kpSE8sm2VaffMHHZsk4EPajz=s1536",
-        "caption": "Ellinge Slott"
-      },
-      {
-        "src": "https://lh3.ggpht.com/p/AF1QipOXBHQSGq0Slq5-YJRNYcH1I5Rz6nCDmhijFz3_=s1536",
-        "caption": "Ellinge Slott"
-      },
-      {
-        "src": "https://lh3.ggpht.com/p/AF1QipP1xDp_pZ-ieN3asorcx812ihW9SOimbCcQzgOH=s1536",
-        "caption": "Ellinge Slott"
-      }
-    ]
-  },
-  "wishlist": {
-    "id": "wishlist",
-    "title": "Wishlist",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  },
-  "rsvp": {
-    "id": "rsvp",
-    "title": "RSVP",
-    "forms": [
-      {
-        "id": "wedding-form",
-        "title": "Wedding",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "buttonText": "Open sign-up form",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSfhXgh2KI8hz0dqCJlRqPib3kot-gEtBD9-xnySjaNRDncm5Q/viewform?embedded=true"
-      },
-      {
-        "id": "speech-form",
-        "title": "Speech",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "buttonText": "Open sign-up form",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSfhXgh2KI8hz0dqCJlRqPib3kot-gEtBD9-xnySjaNRDncm5Q/viewform?embedded=true"
-      }
-    ],
-    "endDate": "2030-10-05T14:00:00+02:00"
-  },
-  "imageUpload": {
-    "id": "imageUpload",
-    "title": "Image Upload",
-    "forms": [
-      {
-        "id": "upload-form",
-        "title": "Image Upload",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "buttonText": "Upload images",
-        "url": "https://www.dropbox.com/request/yourId",
-        "newWindow": true
-      }
-    ],
-    "startDate": "2030-10-05T14:00:00+02:00"
-  },
-  "contact": {
-    "id": "contact",
-    "title": "Contact Us",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:\n* Alice: 07X-XXX XX XX\n* Bob: 07X-XXX XX XX\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua: [wedding@gmail.com](mailto:wedding@gmail.com)"
-  },
-  "footer": {
-    "id": "footer",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  }
+  ]
 }
