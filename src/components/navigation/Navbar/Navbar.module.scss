@@ -81,7 +81,7 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-lg) {
   .nav {
     height: 80px;
   }

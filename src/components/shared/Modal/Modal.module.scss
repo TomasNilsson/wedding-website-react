@@ -21,7 +21,7 @@
   outline: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-md) {
   .modal {
     border-radius: 5px;
     width: auto;

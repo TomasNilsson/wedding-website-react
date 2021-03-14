@@ -1,3 +1,5 @@
+@import '../../../../customize/variables';
+
 .timeline {
   padding-top: 10px;
   width: 100%;
@@ -8,17 +10,17 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-}
 
-.timeline:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: -10px;
-  margin-right: -0.5px;
-  width: 1px;
-  background: #ccc;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -10px;
+    margin-right: -0.5px;
+    width: 1px;
+    background: #ccc;
+  }
 }
 
 .column {
@@ -30,7 +32,7 @@
   padding-bottom: 65px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-lg) {
   .timeline:after {
     right: 50%;
   }

@@ -3,7 +3,7 @@
 .container {
   padding-bottom: 20px;
   position: relative;
-  font-size: 16px;
+  font-size: $font-size-standard;
 }
 
 .image {
@@ -25,6 +25,10 @@
 .leftSide {
   padding-right: 10px;
   text-align: right;
+
+  &.dateCircle:after {
+    right: -20.5px;
+  }
 }
 
 .dateCircle:after {
@@ -39,11 +43,7 @@
   z-index: 20;
 }
 
-.leftSide.dateCircle:after {
-  right: -20.5px;
-}
-
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-lg) {
   .image {
     max-width: 400px;
   }
@@ -52,76 +52,76 @@
     display: block;
     position: absolute;
     top: 18px;
-  }
 
-  .arrow:after,
-  .arrow:before {
-    border: medium solid transparent;
-    content: ' ';
-    position: absolute;
+    &:after,
+    &:before {
+      border: medium solid transparent;
+      content: ' ';
+      position: absolute;
+    }
   }
 
   .leftSide {
     padding-right: 70px;
     text-align: right;
-  }
 
-  .leftSide .arrow {
-    right: 33px;
-  }
+    .arrow {
+      right: 33px;
 
-  .leftSide .arrow:after,
-  .leftSide .arrow:before {
-    right: 100%;
-  }
+      &:after,
+      &:before {
+        right: 100%;
+      }
 
-  .leftSide .arrow:after {
-    border-color: rgba(255, 255, 255, 0);
-    border-right-color: #fff;
-    border-width: 6px;
-    margin-top: -6px;
-  }
+      &:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-right-color: #fff;
+        border-width: 6px;
+        margin-top: -6px;
+      }
 
-  .leftSide .arrow:before {
-    border-color: rgba(222, 3, 127, 0);
-    border-right-color: $primary-color;
-    border-width: 7px;
-    margin-top: -7px;
-  }
+      &:before {
+        border-color: rgba(222, 3, 127, 0);
+        border-right-color: $primary-color;
+        border-width: 7px;
+        margin-top: -7px;
+      }
+    }
 
-  .leftSide.dateCircle:after {
-    right: -10.5px;
+    &.dateCircle:after {
+      right: -10.5px;
+    }
   }
 
   .rightSide {
     padding-left: 70px;
     text-align: left;
-  }
 
-  .rightSide .arrow {
-    left: 33px;
-  }
+    .arrow {
+      left: 33px;
 
-  .rightSide .arrow:after,
-  .rightSide .arrow:before {
-    left: 100%;
-  }
+      &:after,
+      &:before {
+        left: 100%;
+      }
 
-  .rightSide .arrow:after {
-    border-color: rgba(255, 255, 255, 0);
-    border-left-color: #fff;
-    border-width: 6px;
-    margin-top: -6px;
-  }
+      &:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-left-color: #fff;
+        border-width: 6px;
+        margin-top: -6px;
+      }
 
-  .rightSide .arrow:before {
-    border-color: rgba(222, 3, 127, 0);
-    border-left-color: $primary-color;
-    border-width: 7px;
-    margin-top: -7px;
-  }
+      &:before {
+        border-color: rgba(222, 3, 127, 0);
+        border-left-color: $primary-color;
+        border-width: 7px;
+        margin-top: -7px;
+      }
+    }
 
-  .rightSide.dateCircle:after {
-    left: -10.5px;
+    &.dateCircle:after {
+      left: -10.5px;
+    }
   }
 }

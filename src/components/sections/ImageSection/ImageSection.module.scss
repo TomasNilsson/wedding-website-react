@@ -8,18 +8,18 @@
   color: #fff;
   padding: 50px 20px;
   box-sizing: border-box;
-  margin-top: 30px;
-}
+  margin-top: 40px;
 
-.section:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  background: rgba(0, 0, 0, 0.5);
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .sectionTextWrapper {
@@ -28,35 +28,31 @@
   margin: 0 auto;
 }
 
-.sectionHeading h2 {
+.sectionHeading {
   font-family: $font-heading;
   font-weight: normal;
-  font-size: 50px;
+  font-size: $font-size-heading;
   margin: 0;
   overflow: auto;
 }
 
 .sectionText {
   line-height: 1.5em;
-  font-size: 18px;
+  font-size: $font-size-large;
+
+  a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
-.sectionText a {
-  color: #ffffff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.sectionText a:hover {
-  text-decoration: underline;
-}
-
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-lg) {
   .section {
     padding: 70px 20px;
-  }
-
-  .sectionText {
-    font-size: 23px;
   }
 }

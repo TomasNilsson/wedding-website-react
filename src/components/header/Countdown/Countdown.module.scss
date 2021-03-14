@@ -1,3 +1,5 @@
+@import '../../../customize/variables';
+
 .column {
   display: inline-block;
 }
@@ -15,7 +17,7 @@
   font-weight: bold;
 }
 
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-lg) {
   .columnElement {
     margin: 0 20px;
     font-size: 16px;

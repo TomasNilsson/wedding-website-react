@@ -5,9 +5,7 @@ import styles from './ImageSection.module.scss'
 const ImageSection = ({ title, text, id, childComponent }) => (
   <section className={styles.section} id={id}>
     <div className={styles.sectionTextWrapper}>
-      <div className={styles.sectionHeading}>
-        <h2>{title}</h2>
-      </div>
+      {!!title && <h2 className={styles.sectionHeading}>{title}</h2>}
       {!!text && (
         <ReactMarkdown className={styles.sectionText} linkTarget="_blank">
           {text}

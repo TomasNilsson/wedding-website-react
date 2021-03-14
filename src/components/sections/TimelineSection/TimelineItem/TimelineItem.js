@@ -12,7 +12,7 @@ const TimelineItem = ({ date, text, image, rightSide }) => (
       )}
     >
       <div className={styles.arrow} />
-      <h4 className={styles.title}>{date}</h4>
+      <h3 className={styles.title}>{date}</h3>
       {!!text && <ReactMarkdown linkTarget="_blank">{text}</ReactMarkdown>}
       {!!image && <img src={image} alt={date} className={styles.image} />}
     </div>

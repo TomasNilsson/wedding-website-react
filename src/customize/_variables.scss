@@ -1,6 +1,10 @@
 $primary-color: #890f3a;
-$secondary-color: #000000;
 $heart-color: $primary-color;
+
+$map-marker-color: $primary-color;
+$map-marker-border-color: #000000;
+$map-marker-hover-color: $map-marker-border-color;
+$map-marker-hover-border-color: $map-marker-color;
 
 $button-bg-color: $primary-color;
 $button-text-color: #ffffff;
@@ -12,3 +16,10 @@ $button-hover-border-color: $button-bg-color;
 $font-standard: 'Raleway', sans-serif;
 $font-primary-heading: 'Great Vibes', cursive;
 $font-heading: $font-primary-heading;
+$font-size-standard: 16px;
+$font-size-large: 20px;
+$font-size-heading: 56px;
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

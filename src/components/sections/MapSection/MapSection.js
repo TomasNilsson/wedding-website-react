@@ -1,105 +1,75 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 import GoogleMap from 'google-map-react'
 import MapLocation from './MapLocation'
 import MapMarker from './MapMarker'
 import styles from './MapSection.module.scss'
 
-class MapSection extends Component {
-  constructor(props) {
-    super(props)
+const MapSection = ({
+  id,
+  center = { lat: 55.76578, lng: 13.322263 },
+  zoom = 11,
+  locations,
+  showLocationTextSection = true,
+}) => {
+  const [hoveredMarkerId, setHoveredMarkerId] = useState('')
 
-    this.state = {
-      hoveredMarkerId: null,
-    }
+  const onMarkerHoverEnter = (key) => {
+    setHoveredMarkerId(key)
   }
 
-  onMarkerHoverEnter = (key) => {
-    this.setState({
-      hoveredMarkerId: key,
-    })
+  const onMarkerHoverLeave = () => {
+    setHoveredMarkerId('')
   }
 
-  onMarkerHoverLeave = (key) => {
-    this.setState({
-      hoveredMarkerId: null,
-    })
-  }
-
-  onMarkerClick = (key, markerProps) => {
+  const onMarkerClick = (key, markerProps) => {
     window.open(markerProps.link)
   }
 
-  render() {
-    const {
-      id,
-      center,
-      zoom,
-      locations,
-      showLocationTextSection = true,
-    } = this.props
-    const { hoveredMarkerId } = this.state
-    return (
-      <section className={styles.section} id={id}>
-        {showLocationTextSection && (
-          <div className={styles.subsectionWrapper}>
-            {locations &&
-              locations.map((location) => (
-                <MapLocation
-                  icon={location.icon}
-                  title={location.title}
-                  text={location.text}
-                  hovered={location.id === hoveredMarkerId}
-                  key={location.id}
-                />
-              ))}
-          </div>
-        )}
+  return (
+    <section className={styles.section} id={id}>
+      {showLocationTextSection && (
         <div className={styles.subsectionWrapper}>
-          <GoogleMap
-            bootstrapURLKeys={{
-              key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
-              language: 'sv',
-              region: 'SE',
-            }}
-            defaultCenter={center}
-            defaultZoom={zoom}
-            onChildMouseEnter={this.onMarkerHoverEnter}
-            onChildMouseLeave={this.onMarkerHoverLeave}
-            onChildClick={this.onMarkerClick}
-          >
-            {locations &&
-              locations.map((location, i) => (
-                <MapMarker
-                  lat={location.latitude}
-                  lng={location.longitude}
-                  icon={location.icon}
-                  title={location.title}
-                  link={location.link}
-                  key={location.id}
-                  showTooltip={!showLocationTextSection}
-                />
-              ))}
-          </GoogleMap>
+          {locations &&
+            locations.map((location) => (
+              <MapLocation
+                icon={location.icon}
+                title={location.title}
+                text={location.text}
+                hovered={location.id === hoveredMarkerId}
+                key={location.id}
+              />
+            ))}
         </div>
-      </section>
-    )
-  }
-}
-
-MapSection.propTypes = {
-  id: PropTypes.string,
-  center: PropTypes.object,
-  zoom: PropTypes.number,
-  locations: PropTypes.array,
-}
-
-MapSection.defaultProps = {
-  center: {
-    lat: 55.76578,
-    lng: 13.322263,
-  },
-  zoom: 11,
+      )}
+      <div className={styles.subsectionWrapper}>
+        <GoogleMap
+          bootstrapURLKeys={{
+            key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+            language: 'sv',
+            region: 'SE',
+          }}
+          defaultCenter={center}
+          defaultZoom={zoom}
+          onChildMouseEnter={onMarkerHoverEnter}
+          onChildMouseLeave={onMarkerHoverLeave}
+          onChildClick={onMarkerClick}
+        >
+          {locations &&
+            locations.map((location) => (
+              <MapMarker
+                lat={location.latitude}
+                lng={location.longitude}
+                icon={location.icon}
+                title={location.title}
+                link={location.link}
+                key={location.id}
+                showTooltip={!showLocationTextSection}
+              />
+            ))}
+        </GoogleMap>
+      </div>
+    </section>
+  )
 }
 
 export default MapSection

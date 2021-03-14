@@ -15,14 +15,14 @@ const ModalButton = ({ buttonText, ...modalContent }) => {
   }
 
   return (
-    <div>
+    <>
       <p>
         <Button onClick={openModal}>{buttonText}</Button>
       </p>
       <Modal open={isModalOpen} onClose={closeModal}>
         <Section {...modalContent} />
       </Modal>
-    </div>
+    </>
   )
 }
 

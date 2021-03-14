@@ -82,7 +82,7 @@ main {
   display: none !important;
 }
 
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-lg) {
   .d-lg-block {
     display: block !important;
   }

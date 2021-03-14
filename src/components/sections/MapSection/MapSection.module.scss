@@ -4,8 +4,17 @@
   min-height: 450px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 40px;
   justify-content: center;
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .subsectionWrapper {
@@ -17,20 +26,9 @@
   justify-content: center;
   box-sizing: border-box;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
 
-@media (min-width: 992px) {
-  .subsectionWrapper {
+  @media (min-width: $breakpoint-lg) {
     flex: 0 0 50%;
     max-width: 50%;
   }
-}
-
-.section a {
-  color: $primary-color;
-  text-decoration: none;
-}
-
-.section a:hover {
-  text-decoration: underline;
 }

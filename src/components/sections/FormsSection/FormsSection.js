@@ -32,9 +32,7 @@ const FormsSection = ({ forms, id }) => {
       {forms &&
         forms.map(({ id, title, text, buttonText, url, newWindow = false }) => (
           <div className={styles.subsectionWrapper} key={id}>
-            <div className={styles.subsectionHeading}>
-              <h2>{title}</h2>
-            </div>
+            {!!title && <h2 className={styles.subsectionHeading}>{title}</h2>}
             {!!text && (
               <ReactMarkdown
                 className={styles.subsectionText}

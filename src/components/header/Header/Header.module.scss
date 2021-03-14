@@ -146,7 +146,7 @@ $z-index-content: $z-index-image-max + 1;
   transition: all 700ms;
 }
 
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-lg) {
   .sliderContent {
     .preTitle {
       font-size: 60px;
