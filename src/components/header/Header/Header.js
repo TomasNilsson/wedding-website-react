@@ -13,7 +13,9 @@ const Header = ({
   title,
   names,
   date,
+  dateFormat,
   dateFormatLanguage,
+  location,
   countdownText,
   inputLabel,
   onInputChange,
@@ -65,13 +67,13 @@ const Header = ({
               timeout={700}
             >
               <>
-                <time dateTime={date} className={styles.date}>
-                  {new Intl.DateTimeFormat(dateFormatLanguage, {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                  }).format(new Date(date))}
+                <time dateTime={date} className={styles.info}>
+                  {new Intl.DateTimeFormat(
+                    dateFormatLanguage,
+                    dateFormat
+                  ).format(new Date(date))}
                 </time>
+                {!!location && <p className={styles.info}>{location}</p>}
                 <Countdown
                   date={date}
                   countdownText={countdownText}

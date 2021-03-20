@@ -87,7 +87,7 @@ $z-index-content: $z-index-image-max + 1;
     }
   }
 
-  .date {
+  .info {
     font-size: 20px;
     font-weight: bold;
     margin: 15px 0;
@@ -156,8 +156,8 @@ $z-index-content: $z-index-image-max + 1;
       font-size: 90px;
     }
 
-    .date {
-      font-size: 25px;
+    .info {
+      font-size: 24px;
     }
   }
 }

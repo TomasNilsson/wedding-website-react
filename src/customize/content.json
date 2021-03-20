@@ -3,7 +3,13 @@
     "title": "Wedding",
     "names": ["Alice", "Bob"],
     "date": "2030-10-05T14:00:00+02:00",
+    "dateFormat": {
+      "year": "numeric",
+      "month": "long",
+      "day": "numeric"
+    },
     "dateFormatLanguage": "en-GB",
+    "location": "",
     "inputLabel": "Enter password",
     "images": ["../images/header_1.jpg", "../images/header_2.jpg"],
     "imagesMobile": [
